@@ -7,11 +7,9 @@
     rgba(128, 125, 125, 1) 0%,
     rgba(14, 14, 14, 1) 50%
   ); */
-
+  color: blueviolet;
   display: flex;
   justify-content: space-between;
-  color: aliceblue;
-  text-align: center;
 }
 .myImage {
   height: 400px;

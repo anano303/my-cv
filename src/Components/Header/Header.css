@@ -1,0 +1,10 @@
+.header {
+  background-color: blueviolet;
+  box-shadow: 0 10px 40px blueviolet;
+  padding: 2px;
+  display: flex;
+  justify-content: space-around;
+}
+.logo {
+  width: 250px;
+}

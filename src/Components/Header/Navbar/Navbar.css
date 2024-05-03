@@ -1,0 +1,14 @@
+.Navbar,
+ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
