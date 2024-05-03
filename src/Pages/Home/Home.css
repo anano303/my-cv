@@ -12,6 +12,16 @@
   justify-content: space-between;
 }
 .myImage {
-  height: 400px;
+  height: 130px;
   border-radius: 0% 10% 30%;
+}
+@media screen and (min-width: 400px) {
+  .myImage {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .myImage {
+    height: 400px;
+  }
 }

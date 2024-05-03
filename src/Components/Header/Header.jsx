@@ -39,20 +39,22 @@ const Header = () => {
       }}
     >
       <img alt="logo" src={logo} className="logo" />
-      <Navbar />
-      <div className="icons">
-        <img
-          className="toggle"
-          src={isOn ? ToggleOn : ToggleOff}
-          alt="toggle"
-          onClick={handleClick}
-        />
-        <img
-          className="lang"
-          src={language === "ge" ? geo : eng}
-          alt="lang"
-          onClick={handleLangClick}
-        />
+      <div className="mobileFlex">
+        <Navbar />
+        <div className="icons">
+          <img
+            className="toggle"
+            src={isOn ? ToggleOn : ToggleOff}
+            alt="toggle"
+            onClick={handleClick}
+          />
+          <img
+            className="lang"
+            src={language === "ge" ? geo : eng}
+            alt="lang"
+            onClick={handleLangClick}
+          />
+        </div>
       </div>
     </div>
   );

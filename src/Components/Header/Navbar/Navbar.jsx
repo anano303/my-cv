@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { LanguageContext } from "../../../Hooks/LanguageContext.js";
 import { useContext, useEffect } from "react";
 import { TEXTS } from "../../../Hooks/Languages.js";
+import menu from "../../../assets/menu.png";
 
 const Navbar = () => {
   const { language } = useContext(LanguageContext);
@@ -14,7 +15,8 @@ const Navbar = () => {
 
   return (
     <div className="Navbar">
-      <ul>
+      <img alt="menu" src={menu} className="menu" />
+      <ul className="ul">
         <li>
           {" "}
           <Link to="/">{TEXTS[language].home}</Link>
