@@ -1,0 +1,16 @@
+.homeArrow {
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+  animation: arrowAnimation 0.5s ease-in-out infinite alternate;
+  z-index: 2;
+}
+@keyframes arrowAnimation {
+  from {
+    transform: translateY(0.313rem);
+  }
+  to {
+    transform: translateY(-0.625rem);
+  }
+}
