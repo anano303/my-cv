@@ -18,9 +18,6 @@
 .links {
   display: none;
 }
-.links.close {
-  animation: slideUp 0.9s ease forwards; /* Add slide up animation */
-}
 
 .links.open {
   display: block;
@@ -57,8 +54,9 @@ a {
 }
 
 a:hover {
-  color: rgb(194, 146, 240);
-  font-size: 22px;
+  color: rgb(240, 157, 190);
+  text-decoration: underline;
+
   transform: scale(1.05);
   transition: transform 0.2s ease;
 }
@@ -73,6 +71,11 @@ a:hover {
   height: 60px;
 }
 
+@media screen and (min-width: 650px) {
+  .links.open {
+    margin-top: 90px;
+  }
+}
 @media screen and (min-width: 820px) {
   .Navbar {
     justify-content: space-between;
@@ -96,12 +99,9 @@ a:hover {
     align-items: center; /* Center the links horizontally */
   }
 
-  .links.open {
-    display: flex;
-    flex-direction: column; /* Show links vertically when menu is open */
-    align-items: flex-end; /* Align links to the right when menu is open */
-    animation: slideDown 0.3s ease forwards;
-  }
+  /* .links.open {
+    display: none;
+  } */
 }
 @media screen and (min-width: 1000px) {
   .links ul {

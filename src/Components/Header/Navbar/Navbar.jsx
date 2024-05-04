@@ -52,9 +52,8 @@ const Navbar = () => {
         )}
       </div>
       <div
-        className={`links ${isMenuOpen ? "open" : ""}${
-          isMenuOpen ? "" : "close"
-        }`}
+        className={`links ${isMenuOpen ? "open" : ""}
+         `}
       >
         <ul className="ul">
           <li>
