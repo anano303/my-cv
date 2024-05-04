@@ -8,43 +8,36 @@ import ToggleOff from "../../assets/toggle off.png";
 import geo from "../../assets/geo.png";
 import eng from "../../assets/eng.png";
 import { ThemeContext } from "../../Hooks/ThemeContext";
-import { THEME } from "../../Hooks/ThemeColors";
+// import { THEME } from "../../Hooks/ThemeColors";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
-  const [isOn, setIsOn] = useState(true);
-  const themeContext = useContext(ThemeContext); // Access ThemeContext
-
-  const { theme } = themeContext; // Destructure theme from ThemeContext
-
-  const handleClick = () => {
-    setIsOn((prevState) => !prevState);
-    // Toggle between 'dark' and 'light' themes
-    themeContext.setTheme((prevTheme) =>
-      prevTheme === "dark" ? "light" : "dark"
-    );
-  };
+  // const [isOn, setIsOn] = useState(true);
+  const { theme, toggleTheme } = useContext(ThemeContext); // Access ThemeContext
 
   const handleLangClick = () => {
     const newLanguage = language === "ge" ? "en" : "ge";
     setLanguage(newLanguage); // Use setLanguage from LanguageContext to update the language
   };
+  const handleClick = () => {
+    // setIsOn((prevState) => !prevState);
+    // Toggle between 'dark' and 'light' themes
+    const newTheme = theme === "light" ? "dark" : "light";
+    toggleTheme(newTheme);
+  };
 
   return (
-    <div
-      className="header"
-      style={{
-        backgroundColor: THEME[theme].backgroundColor,
-        // color: THEME[theme].text,
-      }}
-    >
-      <img alt="logo" src={logo} className="logo" />
+    <div className="header">
+      <Link to="/">
+        <img alt="logo" src={logo} className="logo" />
+      </Link>
       <div className="mobileFlex">
         <Navbar />
         <div className="icons">
           <img
             className="toggle"
-            src={isOn ? ToggleOn : ToggleOff}
+            src={theme === "light" ? ToggleOn : ToggleOff}
             alt="toggle"
             onClick={handleClick}
           />

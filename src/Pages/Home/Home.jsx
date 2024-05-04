@@ -1,7 +1,11 @@
 import MyImage from "../../assets/image.png";
 import "./Home.css";
+// import { useContext } from "react";
+// import { ThemeContext } from "../../Hooks/ThemeContext";
+// import {THEME} from "../../Hooks/ThemeColors"
 
 const Home = () => {
+  // const ThemeContext = useContext(ThemeContext);
   return (
     <div className="home">
       <div className="text">

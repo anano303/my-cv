@@ -8,14 +8,14 @@ import ToggleOn from "../../../assets/toggle on (2).png";
 import ToggleOff from "../../../assets/toggle off.png";
 import geo from "../../../assets/geo.png";
 import eng from "../../../assets/eng.png";
-import { ThemeContext } from "../../../Hooks/ThemeContext";
-import { THEME } from "../../../Hooks/ThemeColors";
+// import { ThemeContext } from "../../../Hooks/ThemeContext";
+// import { THEME } from "../../../Hooks/ThemeColors";
 import close from "../../../assets/close.png";
 
 const Navbar = () => {
   const { language, setLanguage } = useContext(LanguageContext);
   const [isOn, setIsOn] = useState(true);
-  const themeContext = useContext(ThemeContext);
+  // const themeContext = useContext(ThemeContext);
   //   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -31,10 +31,6 @@ const Navbar = () => {
   }, [language]);
   const handleClick = () => {
     setIsOn((prevState) => !prevState);
-    // Toggle between 'dark' and 'light' themes
-    themeContext.setTheme((prevTheme) =>
-      prevTheme === "dark" ? "light" : "dark"
-    );
   };
 
   const handleLangClick = () => {

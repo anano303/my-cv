@@ -1,4 +1,4 @@
-@import url("https://api.fontshare.com/v2/css?f[]=supreme@800,400,300,500,700&display=swap");
+/* @import url("https://api.fontshare.com/v2/css?f[]=supreme@800,400,300,500,700&display=swap"); */
 
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -10,6 +10,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", Poppins,
     monospace;
 }
+
 body.en {
   font-family: "Poppins", sans-serif !important;
 
@@ -19,6 +20,14 @@ body.ge {
   font-family: "BPGNinoMtavruliNormal", sans-serif;
   /* background-color: rgb(30, 31, 32); */
 }
+.light {
+  background-color: aliceblue;
+}
+
+.dark {
+  background-color: black;
+}
+
 @font-face {
   font-family: "BPGNinoMtavruliNormal";
   src: url("./bpg_nino_mtavruli_normal.ttf");

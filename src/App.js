@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { useState, useEffect } from "react";
 import Layout from "./Layouts/Layout";
 import Home from "./Pages/Home/Home";
@@ -9,24 +8,34 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import arrowHome from "./arrow_button.png";
 import { LanguageContext } from "../src/Hooks/LanguageContext";
 import { ThemeContext } from "../src/Hooks/ThemeContext";
-import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [language, setLanguage] = useState("ge");
-  const [theme, setTheme] = useState("light");
   const [showAllPages, setShowAllPages] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     document.body.className = language;
   }, [language]);
 
+  useEffect(() => {
+    const appEl = document.getElementById("app");
+    if (appEl) {
+      appEl.className = theme;
+    }
+  }, [theme]);
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  };
+
   const toggleShowAllPages = () => {
     setShowAllPages((prev) => !prev);
   };
+
   return (
-    <div className="App">
+    <div className="App" id="app">
       <LanguageContext.Provider value={{ language, setLanguage }}>
-        <ThemeContext.Provider value={{ theme, setTheme }}>
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <Router>
             {showAllPages ? (
               <Layout>
