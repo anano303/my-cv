@@ -14,26 +14,23 @@
 .logo {
   width: 150px;
 }
-.toggle,
-.lang {
-  width: 30px;
-  height: 30px;
-}
+
 .icons {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  display: none;
 }
+
 @media screen and (min-width: 650px) {
   .header .logo {
     width: 250px;
   }
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .icons {
+    display: flex;
+    gap: 5px;
     flex-direction: row;
-    gap: 0px;
   }
+
   .toggle,
   .lang {
     width: 50px;

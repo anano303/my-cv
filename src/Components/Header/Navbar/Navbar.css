@@ -1,72 +1,128 @@
-.Navbar,
-ul {
+.Navbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-left: 10px;
   margin-right: 5px;
 }
-.Navbar .ul {
+
+.menu img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+.menu:hover img {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+.links {
   display: none;
 }
-ul li {
+.links.close {
+  animation: slideUp 0.9s ease forwards; /* Add slide up animation */
+}
+
+.links.open {
+  display: block;
+  background: blueviolet;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 60px;
+  animation: slideDown 0.9s ease forwards;
+}
+
+.links.open ul {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 12vh;
+  align-items: center;
+  margin: 0;
+  box-shadow: 0 30px 60px blueviolet;
+}
+
+ul {
   text-decoration: none;
   list-style-type: none;
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
   color: rgb(213, 185, 239);
   font-weight: bolder;
   font-size: 16px;
 }
+
 a:hover {
   color: rgb(194, 146, 240);
   font-size: 22px;
   transform: scale(1.05);
   transition: transform 0.2s ease;
 }
-
-.menu {
-  display: block;
+.mobileIcons {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+}
+.toggle,
+.lang {
   width: 60px;
   height: 60px;
 }
 
-@media screen and (min-width: 650px) {
-  .menu {
-    width: 80px;
-    height: 80px;
-  }
-}
-@media screen and (min-width: 800px) {
-  .Navbar,
-  ul {
+@media screen and (min-width: 820px) {
+  .Navbar {
     justify-content: space-between;
-    width: 120%;
-    gap: 20px;
-    margin-right: 20px;
   }
-  .Navbar .ul {
+  .links ul .mobileIcons {
+    display: none;
+  }
+  .links ul {
     display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 10px;
   }
+
   .menu {
     display: none;
   }
+
+  .links {
+    display: flex;
+    align-items: center; /* Center the links horizontally */
+  }
+
+  .links.open {
+    display: flex;
+    flex-direction: column; /* Show links vertically when menu is open */
+    align-items: flex-end; /* Align links to the right when menu is open */
+    animation: slideDown 0.3s ease forwards;
+  }
 }
 @media screen and (min-width: 1000px) {
-  .Navbar,
-  ul {
-    margin-left: 30px;
-    gap: 50px;
-  }
-  a {
-    font-size: 20px;
+  .links ul {
+    gap: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (min-width: 1500px) {
-  .Navbar,
-  ul {
-    gap: 70px;
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
