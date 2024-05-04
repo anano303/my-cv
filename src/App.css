@@ -1,7 +1,9 @@
 .App {
-  background-image: url(assets/Ellipse\ 8.png);
+  background-image: url("drop.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-image: url("drop.png");
 }
 .homeArrow {
   background-color: transparent;

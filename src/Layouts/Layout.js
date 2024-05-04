@@ -1,4 +1,5 @@
 import Header from "../Components/Header/Header";
+import Footer from "../Components/Footer/Footer.jsx";
 export default function Layout({ children }) {
   return (
     <div>
@@ -8,9 +9,9 @@ export default function Layout({ children }) {
       <main>
         <div>{children}</div>
       </main>
-      {/* <footer>
+      <footer>
         <Footer />
-      </footer> */}
+      </footer>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import arrowHome from "./arrow_button.png";
 import { LanguageContext } from "../src/Hooks/LanguageContext";
 import { ThemeContext } from "../src/Hooks/ThemeContext";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [language, setLanguage] = useState("ge");

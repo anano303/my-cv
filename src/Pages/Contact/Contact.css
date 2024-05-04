@@ -1,0 +1,11 @@
+.contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.socIcons img {
+  width: 25%;
+}

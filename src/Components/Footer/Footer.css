@@ -1,0 +1,12 @@
+.footer {
+  position: relative;
+}
+
+.footer p {
+  position: absolute;
+  bottom: 0;
+  margin-left: 20%;
+}
+.footer img {
+  width: 100vw;
+}
