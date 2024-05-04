@@ -1,7 +1,7 @@
 export const TEXTS = {
   ge: {
     home: "მთავარი",
-    about: "ვინ ვართ მე?",
+    about: "ვინ ვარ მე?",
     services: "სერვისები",
     portfolio: "პორტფოლიო",
     contact: "საკონტაქტო",
