@@ -20,12 +20,24 @@ body.ge {
   font-family: "BPGNinoMtavruliNormal", sans-serif;
   /* background-color: rgb(30, 31, 32); */
 }
-.light {
+/* .light {
   background-color: aliceblue;
+} */
+.light {
+  background-color: rgb(244, 221, 237);
+  background-image: url("drop.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-image: url("drop.png");
 }
 
 .dark {
   background-color: black;
+  background-image: url("drop.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 @font-face {

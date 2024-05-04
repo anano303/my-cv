@@ -18,7 +18,8 @@
 .links {
   display: none;
 }
-body.dark .links.open {
+
+.dark .links.open {
   background-color: black;
 }
 
@@ -38,20 +39,24 @@ body.dark .links.open {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0;
+  align-items: left;
+  gap: 30px;
+
   box-shadow: 0 30px 60px blueviolet;
-}
-body.ge .links.open ul {
   font-size: 12vh;
   font-size: 56px;
   font-weight: bolder;
   line-height: 40px;
   letter-spacing: 2px;
-
-  text-align: left;
   transition: max-height 3s ease;
 }
+.dark .links.open ul {
+  box-shadow: 0 30px 60px rgb(13, 1, 23);
+}
+.links.open ul li {
+  padding-left: 50px;
+}
+
 body.en .links.open ul {
   font-size: 10vh;
   font-size: 56px;
@@ -71,7 +76,7 @@ a {
   text-decoration: none;
   color: rgb(205, 171, 237);
   font-weight: bolder;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 a:hover {
@@ -87,6 +92,7 @@ a:hover {
   gap: 20px;
   padding-top: 30px;
   padding-bottom: 60px;
+  padding-left: 50px;
 }
 .toggle,
 .lang {

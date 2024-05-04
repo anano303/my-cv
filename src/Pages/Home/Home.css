@@ -9,7 +9,9 @@
   ); */
   color: blueviolet;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: center;
 }
 .myImage {
   height: 130px;
@@ -17,10 +19,15 @@
 }
 @media screen and (min-width: 400px) {
   .myImage {
-    height: 200px;
+    height: 300px;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 650px) {
+  .home {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
   .myImage {
     height: 400px;
   }

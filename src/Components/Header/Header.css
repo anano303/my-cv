@@ -7,6 +7,11 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.dark .header {
+  background-color: black;
+  box-shadow: 0 10px 40px rgb(9, 0, 17);
+}
 .mobileFlex {
   display: flex;
   align-items: center;

@@ -11,14 +11,15 @@ import eng from "../../../assets/eng.png";
 // import { ThemeContext } from "../../../Hooks/ThemeContext";
 // import { THEME } from "../../../Hooks/ThemeColors";
 import close from "../../../assets/close.png";
+import { ThemeContext } from "../../../Hooks/ThemeContext.js";
 
 const Navbar = () => {
   const { language, setLanguage } = useContext(LanguageContext);
-  const [isOn, setIsOn] = useState(true);
+  // const [isOn, setIsOn] = useState(true);
   // const themeContext = useContext(ThemeContext);
   //   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -26,11 +27,11 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  useEffect(() => {
-    document.body.className = language;
-  }, [language]);
   const handleClick = () => {
-    setIsOn((prevState) => !prevState);
+    // setIsOn((prevState) => !prevState);
+    // Toggle between 'dark' and 'light' themes
+    const newTheme = theme === "light" ? "dark" : "light";
+    toggleTheme(newTheme);
   };
 
   const handleLangClick = () => {
@@ -79,7 +80,7 @@ const Navbar = () => {
           <div className="mobileIcons">
             <img
               className="toggle"
-              src={isOn ? ToggleOn : ToggleOff}
+              src={theme === "light" ? ToggleOn : ToggleOff}
               alt="toggle"
               onClick={handleClick}
             />
