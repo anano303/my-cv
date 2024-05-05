@@ -5,9 +5,10 @@ import About from "./Pages/About/About";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import Contact from "./Pages/Contact/Contact";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import arrowHome from "./arrow_button.png";
+import arrowHome from "./icons8-down-94.png";
 import { LanguageContext } from "../src/Hooks/LanguageContext";
 import { ThemeContext } from "../src/Hooks/ThemeContext";
+import "./App.css";
 
 function App() {
   const [language, setLanguage] = useState("ge");

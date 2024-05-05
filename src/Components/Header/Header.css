@@ -34,11 +34,13 @@
     display: flex;
     gap: 5px;
     flex-direction: row;
+    cursor: pointer;
   }
 
   .toggle,
   .lang {
     width: 50px;
     height: 50px;
+    cursor: pointer;
   }
 }

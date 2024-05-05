@@ -1,11 +1,17 @@
 .homeArrow {
   background-color: transparent;
   border: none;
-  width: 50px;
+  width: 80px;
   cursor: pointer;
   animation: arrowAnimation 0.5s ease-in-out infinite alternate;
   z-index: 2;
+  margin-left: 45%;
 }
+.homeArrow img {
+  width: 50px;
+  height: 50px;
+}
+
 @keyframes arrowAnimation {
   from {
     transform: translateY(0.313rem);
