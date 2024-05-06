@@ -7,7 +7,7 @@
     rgba(128, 125, 125, 1) 0%,
     rgba(14, 14, 14, 1) 50%
   ); */
-  color: blueviolet;
+  color: rgb(35, 32, 245);
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
@@ -22,14 +22,21 @@
   margin-bottom: 60px;
 }
 .download {
-  background-color: blueviolet;
-  border-radius: 30%;
+  background-color: rgb(63, 44, 232);
+  border-radius: 10% 20px;
   padding: 10px;
-  box-shadow: 1px 20px 50px rgb(65, 9, 155);
+  box-shadow: 1px 20px 50px rgb(63, 44, 232);
+  color: black;
+}
+.text a {
+  color: aqua;
+}
+.text a:hover {
+  color: blue;
 }
 .download:hover {
-  background-color: rgb(240, 19, 174);
-  box-shadow: 1px 20px 50px rgb(155, 9, 111);
+  background-color: yellow;
+  box-shadow: 1px 20px 50px yellow;
   padding: 12px;
 }
 @media screen and (min-width: 400px) {

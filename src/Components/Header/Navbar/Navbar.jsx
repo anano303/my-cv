@@ -3,14 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { LanguageContext } from "../../../Hooks/LanguageContext.js";
 import { useContext, useEffect, useState } from "react";
 import { TEXTS } from "../../../Hooks/Languages.js";
-import menu from "../../../assets/menu.png";
+import menu from "../../../assets/icons8-menu-bar-100.png";
 import ToggleOn from "../../../assets/toggle on (2).png";
 import ToggleOff from "../../../assets/toggle off.png";
 import geo from "../../../assets/geo.png";
 import eng from "../../../assets/eng.png";
 // import { ThemeContext } from "../../../Hooks/ThemeContext";
 // import { THEME } from "../../../Hooks/ThemeColors";
-import close from "../../../assets/close.png";
+import close from "../../../assets/icons8-close-window-100.png";
 import { ThemeContext } from "../../../Hooks/ThemeContext.js";
 
 const Navbar = () => {

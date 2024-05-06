@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { LanguageContext } from "../../Hooks/LanguageContext";
-import logo from "../../assets/logo-no-background.png";
+import logo from "../../assets/thumbnail_anano without background.png";
 import "./Header.css";
 import Navbar from "./Navbar/Navbar";
 import ToggleOn from "../../assets/toggle on (2).png";
@@ -10,6 +10,7 @@ import eng from "../../assets/eng.png";
 import { ThemeContext } from "../../Hooks/ThemeContext";
 // import { THEME } from "../../Hooks/ThemeColors";
 import { Link } from "react-router-dom";
+import darkLogo from "../../assets/darkLogo.png";
 
 const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
@@ -30,7 +31,11 @@ const Header = () => {
   return (
     <div className="header">
       <Link to="/">
-        <img alt="logo" src={logo} className="logo" />
+        <img
+          alt="logo"
+          src={theme === "dark" ? darkLogo : logo}
+          className="logo"
+        />
       </Link>
       <div className="mobileFlex">
         <Navbar />
