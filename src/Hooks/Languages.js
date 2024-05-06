@@ -6,6 +6,7 @@ export const TEXTS = {
     portfolio: "პორტფოლიო",
     contact: "საკონტაქტო",
     download: "გადმოტვირთე რეზიუმე",
+    contactMe: "დამიკავშირდი",
     whoAreWe:
       " ვინ ვართ ჩვენ? - მარკეტერები, რომლებიც საქმის სუპერ პროფესიონალები ვართ.",
     ourVisionIs: "ჩვენი ხედვა ესეთია:",
@@ -33,6 +34,7 @@ export const TEXTS = {
     portfolio: "PORTFOLIO",
     contact: "CONTACT",
     download: "DOWNLOAD CV",
+    contactMe: "CONTACT ME ",
     whoAreWe: "who are we? - Marketers who are super professionals.",
     ourVisionIs: "Our vision is:",
     provideCustomers:

@@ -86,7 +86,7 @@ const Navbar = () => {
             />
             <img
               className="lang"
-              src={language === "ge" ? geo : eng}
+              src={language === "ge" ? eng : geo}
               alt="lang"
               onClick={handleLangClick}
             />

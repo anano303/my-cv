@@ -4,8 +4,12 @@ import git from "../../assets/Git.png";
 import insta from "../../assets/Instagram.png";
 import emailIcon from "../../assets/Email.png";
 import telIcon from "../../assets/telpon.png";
+import { TEXTS } from "../../Hooks/Languages";
+import { LanguageContext } from "../../Hooks/LanguageContext";
+import { useContext } from "react";
 
 const Contact = () => {
+  const { language, setLanguage } = useContext(LanguageContext);
   // State variables to store form data
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -50,7 +54,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h1>Contact Me</h1>
+      <h1>{TEXTS[language].contactMe}</h1>
 
       {submitted ? (
         <p>Thank you for your message!</p>
@@ -96,10 +100,19 @@ const Contact = () => {
       )}
 
       <div className="socIcons">
-        <img alt="icon" src={git} />
-        <img alt="icon" src={insta} />
-        <img alt="icon" src={emailIcon} />
-        <img alt="icon" src={telIcon} />
+        <a href="https://github.com/anano303?tab=repositories" target="blank">
+          {" "}
+          <img alt="icon" src={git} />
+        </a>
+        <a href="www.facebook.com/anano303" target="blank">
+          <img alt="icon" src={insta} />
+        </a>
+        <a href="mailto:beroshviliani100@gmail.com?subject=Your%20Subject%20Here">
+          <img alt="icon" src={emailIcon} />
+        </a>
+        <a href="tel:+995577300480">
+          <img alt="icon" src={telIcon} />
+        </a>
       </div>
     </div>
   );
