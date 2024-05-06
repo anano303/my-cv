@@ -57,7 +57,7 @@ const Contact = () => {
       <h1>{TEXTS[language].contactMe}</h1>
 
       {submitted ? (
-        <p>Thank you for your message!</p>
+        <p>{TEXTS[language].messageSent}</p>
       ) : (
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">

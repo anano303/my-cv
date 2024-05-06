@@ -7,6 +7,7 @@ export const TEXTS = {
     contact: "საკონტაქტო",
     download: "გადმოტვირთე რეზიუმე",
     contactMe: "დამიკავშირდი",
+    messageSent: "შეტყობინება გაგზავნილია, მადლობა <3",
     whoAreWe:
       " ვინ ვართ ჩვენ? - მარკეტერები, რომლებიც საქმის სუპერ პროფესიონალები ვართ.",
     ourVisionIs: "ჩვენი ხედვა ესეთია:",
@@ -35,6 +36,7 @@ export const TEXTS = {
     contact: "CONTACT",
     download: "DOWNLOAD CV",
     contactMe: "CONTACT ME ",
+    messageSent: "Thank you for your message!",
     whoAreWe: "who are we? - Marketers who are super professionals.",
     ourVisionIs: "Our vision is:",
     provideCustomers:
