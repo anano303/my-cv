@@ -81,13 +81,12 @@ a {
   /* font-size: 16px; */
 }
 .dark a {
-  color: aqua;
+  color: rgb(30, 216, 216);
 }
 
 a:hover {
   color: rgb(240, 157, 190);
-  text-decoration: underline;
-
+  text-shadow: 1px 3px 7px #e962e7;
   transform: scale(1.05);
   transition: transform 0.2s ease;
 }

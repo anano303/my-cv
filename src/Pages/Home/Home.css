@@ -35,8 +35,8 @@
   color: blue;
 }
 .download:hover {
-  background-color: yellow;
-  box-shadow: 1px 20px 50px yellow;
+  background-color: aqua;
+  box-shadow: 1px 20px 50px aqua;
   padding: 12px;
 }
 @media screen and (min-width: 400px) {

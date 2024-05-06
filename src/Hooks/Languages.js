@@ -5,6 +5,7 @@ export const TEXTS = {
     services: "სერვისები",
     portfolio: "პორტფოლიო",
     contact: "საკონტაქტო",
+    download: "გადმოტვირთე რეზიუმე",
     whoAreWe:
       " ვინ ვართ ჩვენ? - მარკეტერები, რომლებიც საქმის სუპერ პროფესიონალები ვართ.",
     ourVisionIs: "ჩვენი ხედვა ესეთია:",
@@ -31,6 +32,7 @@ export const TEXTS = {
     services: "SERVICES",
     portfolio: "PORTFOLIO",
     contact: "CONTACT",
+    download: "DOWNLOAD CV",
     whoAreWe: "who are we? - Marketers who are super professionals.",
     ourVisionIs: "Our vision is:",
     provideCustomers:

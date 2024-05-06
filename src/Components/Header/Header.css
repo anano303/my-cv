@@ -10,7 +10,7 @@
 
 .dark .header {
   background-color: black;
-  box-shadow: 0 10px 40px rgb(9, 0, 17);
+  box-shadow: 0 1px 12px 20px black;
 }
 .mobileFlex {
   display: flex;
