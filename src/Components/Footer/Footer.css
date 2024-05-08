@@ -1,7 +1,9 @@
 .footer {
   position: relative;
 }
-
+body.en .footer p {
+  margin-left: 50%;
+}
 .footer p {
   position: absolute;
   bottom: -10px;
