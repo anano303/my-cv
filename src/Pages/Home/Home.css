@@ -75,6 +75,7 @@
 }
 .sect2 img {
   width: 40%;
+  border-radius: 1% 20%;
 }
 .text2 {
   display: flex;
@@ -92,8 +93,7 @@
   border-radius: 10% 20px;
   border: none;
   cursor: pointer;
-  margin-left: 30px;
-  padding: 2px 20px;
+  font-size: 8px;
 }
 .homeButton:hover {
   background-color: #f7bfd9;
@@ -125,6 +125,7 @@
   }
   .homeButton {
     padding: 10px;
+    font-size: 16px;
   }
   .sect2 {
     margin-top: 120px;
