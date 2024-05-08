@@ -109,14 +109,19 @@
     height: 300px;
   }
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 820px) {
   .sect1 {
-    flex-direction: row;
+    margin-top: 100px;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 5vw;
   }
   .myImage {
-    height: 400px;
+    height: 250px;
+  }
+  .text {
+    max-width: 500px;
   }
   .boxes {
     flex-direction: row;
