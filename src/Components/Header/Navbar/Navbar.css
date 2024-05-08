@@ -134,6 +134,7 @@ a:hover {
   .desktop1,
   .desktop2 {
     display: flex;
+    flex-direction: row;
     gap: 40px;
   }
   /* .portfolio {

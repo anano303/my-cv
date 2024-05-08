@@ -1,56 +1,132 @@
 .home {
   padding: 50px 0px 80px 50px;
-  height: 100vh;
-  /* background: rgb(14, 14, 14); */
-  /* background: radial-gradient(
-    circle,
-    rgba(128, 125, 125, 1) 0%,
-    rgba(14, 14, 14, 1) 50%
-  ); */
-  color: rgb(35, 32, 245);
+  min-height: 100vh;
+  color: #165b66;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+.sect1 {
+  display: flex;
+  flex-direction: column-reverse;
 }
 .myImage {
   height: 130px;
   border-radius: 0% 10% 30%;
 }
 
-.home h1:nth-child(3) {
-  margin-bottom: 60px;
-}
-.download {
-  background-color: rgb(63, 44, 232);
-  border-radius: 10% 20px;
-  padding: 10px;
-  box-shadow: 1px 20px 50px rgb(63, 44, 232);
-  color: black;
+.text,
+.sect2 {
+  background-color: #c2fdd4;
+  border-radius: 2% 15%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
 }
 .text a {
-  color: aqua;
+  color: white;
 }
-.text a:hover {
-  color: blue;
+
+.home h1 {
+  font-family: "Nothing You Could Do", cursive;
+  align-self: center;
+  text-align: center;
 }
+.home span {
+  font-family: "Nothing You Could Do", cursive;
+  text-shadow: -1px -1px 0 #165b66, 1px -1px 0 #165b66, -1px 1px 0 #165b66,
+    1px 1px 0 #165b66;
+  color: white;
+  font-size: 22px;
+}
+.home p {
+  font-family: "Old Standard TT", serif;
+}
+
+.download {
+  background-color: #9ab5ec;
+  border-radius: 10% 20px;
+  padding: 10px;
+  box-shadow: 1px 20px 50px #9ab5ec;
+  /* color: black; */
+}
+
 .download:hover {
-  background-color: aqua;
-  box-shadow: 1px 20px 50px aqua;
+  background-color: #f7bfd9;
+  box-shadow: 1px 20px 50px #f7bfd9;
   padding: 12px;
 }
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+.sect2 {
+  flex-direction: row;
+  align-items: center;
+  gap: 8vw;
+  margin-top: 80px;
+}
+.sect2 img {
+  width: 40%;
+}
+.text2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  padding-left: 40px;
+  /* width: 70%; */
+}
+.text2 span {
+  font-size: 3vw;
+}
+.homeButton {
+  background-color: #9ab5ec;
+  box-shadow: 1px 20px 50px #9ab5ec;
+  border-radius: 10% 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 30px;
+  padding: 2px 20px;
+}
+.homeButton:hover {
+  background-color: #f7bfd9;
+  box-shadow: 1px 20px 50px #f7bfd9;
+}
+
+.homeButton a {
+  color: white;
+}
+
 @media screen and (min-width: 400px) {
   .myImage {
     height: 300px;
   }
 }
 @media screen and (min-width: 650px) {
-  .home {
+  .sect1 {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
   }
   .myImage {
     height: 400px;
+  }
+  .boxes {
+    flex-direction: row;
+    gap: 8vw;
+    margin-top: 120px;
+  }
+  .homeButton {
+    padding: 10px;
+  }
+  .sect2 {
+    margin-top: 120px;
   }
 }
