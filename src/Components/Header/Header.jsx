@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="mobileFlex">
-        <Link to="/">
+        <Link to="/" className="logo">
           <img
             alt="logo"
             src={theme === "dark" ? darkLogo : logo}

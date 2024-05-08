@@ -19,7 +19,6 @@
   width: 150px;
   position: absolute;
   transform: translateY(-19%);
-  z-index: 2;
   cursor: pointer;
 }
 
@@ -47,7 +46,7 @@
     top: 75%;
   }
   .logo {
-    left: 32%;
+    left: 25%;
     top: 58%;
   }
   .header {
@@ -62,5 +61,8 @@
 @media screen and (min-width: 1000px) {
   .icons {
     top: 50%;
+  }
+  .logo {
+    left: 28%;
   }
 }

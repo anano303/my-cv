@@ -54,50 +54,52 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h1>{TEXTS[language].contactMe}</h1>
+      <div className="section1">
+        <h1>{TEXTS[language].contactMe}</h1>
 
-      {submitted ? (
-        <p>{TEXTS[language].messageSent}</p>
-      ) : (
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-group">
-            <input
-              type="text"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="email"
-              placeholder="Your Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="text"
-              placeholder="Subject"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <textarea
-              placeholder="Your Message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            ></textarea>
-          </div>
-          <button type="submit">Send</button>
-        </form>
-      )}
+        {submitted ? (
+          <p>{TEXTS[language].messageSent}</p>
+        ) : (
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                placeholder="Your Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        )}
+      </div>
 
       <div className="socIcons">
         <a href="https://github.com/anano303?tab=repositories" target="blank">

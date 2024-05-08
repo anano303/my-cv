@@ -1,7 +1,11 @@
 .footer {
   position: relative;
 }
-body.en .footer p {
+.app.dark .footer {
+  background-color: black;
+}
+body.en .footer p,
+body.ge .footer p {
   margin-left: 50%;
 }
 .footer p {
