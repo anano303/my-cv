@@ -4,20 +4,15 @@ import { LanguageContext } from "../../../Hooks/LanguageContext.js";
 import { useContext, useEffect, useState } from "react";
 import { TEXTS } from "../../../Hooks/Languages.js";
 import menu from "../../../assets/icons8-menu-bar-100.png";
-import ToggleOn from "../../../assets/toggle on (2).png";
-import ToggleOff from "../../../assets/toggle off.png";
-import geo from "../../../assets/geo.png";
-import eng from "../../../assets/eng.png";
-// import { ThemeContext } from "../../../Hooks/ThemeContext";
-// import { THEME } from "../../../Hooks/ThemeColors";
+import ToggleOn from "../../../assets/Land Switch - Dark.png";
+import ToggleOff from "../../../assets/Sky Switch - Light.png";
+import geo from "../../../assets/Georgia.png";
+import eng from "../../../assets/USA.png";
 import close from "../../../assets/icons8-close-window-100.png";
 import { ThemeContext } from "../../../Hooks/ThemeContext.js";
 
 const Navbar = () => {
   const { language, setLanguage } = useContext(LanguageContext);
-  // const [isOn, setIsOn] = useState(true);
-  // const themeContext = useContext(ThemeContext);
-  //   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const toggleMenu = () => {
@@ -28,8 +23,6 @@ const Navbar = () => {
   };
 
   const handleClick = () => {
-    // setIsOn((prevState) => !prevState);
-    // Toggle between 'dark' and 'light' themes
     const newTheme = theme === "light" ? "dark" : "light";
     toggleTheme(newTheme);
   };
@@ -53,30 +46,33 @@ const Navbar = () => {
          `}
       >
         <ul className="ul">
-          <li>
-            {" "}
-            <Link to="/" onClick={closeMenu}>
-              {TEXTS[language].home}
-            </Link>
-          </li>
-          <li>
-            {" "}
-            <Link to="/about" onClick={closeMenu}>
-              {TEXTS[language].about}
-            </Link>
-          </li>
-          <li>
-            {" "}
-            <Link to="/portfolio" onClick={closeMenu}>
-              {TEXTS[language].portfolio}
-            </Link>
-          </li>
-          <li>
-            {" "}
-            <Link to="/contact" onClick={closeMenu}>
-              {TEXTS[language].contact}
-            </Link>
-          </li>
+          <div className="desktop1">
+            <li>
+              {" "}
+              <Link to="/" onClick={closeMenu}>
+                {TEXTS[language].home}
+              </Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/about" onClick={closeMenu}>
+                {TEXTS[language].about}
+              </Link>
+            </li>
+          </div>
+          <div className="desktop2">
+            <li className="portfolio">
+              <Link to="/portfolio" onClick={closeMenu}>
+                {TEXTS[language].portfolio}
+              </Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/contact" onClick={closeMenu}>
+                {TEXTS[language].contact}
+              </Link>
+            </li>
+          </div>
           <div className="mobileIcons">
             <img
               className="toggle"

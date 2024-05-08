@@ -1,9 +1,11 @@
 .Navbar {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: 10px;
   margin-right: 5px;
+}
+.menu {
+  position: absolute;
+  left: 78%;
+  top: 0;
 }
 
 .menu img {
@@ -26,11 +28,11 @@
 
 .links.open {
   display: block;
-  background: #9a9fe9;
+  background: #c2fdd4;
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 68px;
+  margin-top: 53px;
   animation: slideDown 0.9s ease forwards;
   opacity: 0.99;
 }
@@ -42,8 +44,7 @@
   flex-direction: column;
   align-items: left;
   gap: 30px;
-
-  box-shadow: 0px 30px 20px 20px #9a9fe9;
+  box-shadow: 0px 30px 20px 20px #c2fdd4;
   font-size: 12vh;
   font-size: 40px;
   font-weight: bolder;
@@ -75,8 +76,8 @@ ul {
 
 a {
   text-decoration: none;
-  color: rgb(245, 244, 246);
-  text-shadow: 1px 20px 30px 50px white;
+  color: #486e74;
+  text-shadow: 1px 20px 30px 50px rgb(255, 255, 255);
   font-weight: bolder;
   /* font-size: 16px; */
 }
@@ -93,34 +94,60 @@ a:hover {
 .mobileIcons {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
   padding-top: 30px;
   padding-bottom: 60px;
   padding-left: 50px;
 }
-.toggle,
+.toggle {
+  width: 67px;
+  height: 30px;
+}
 .lang {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 100%;
+}
+.desktop1,
+.desktop2 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (min-width: 400px) {
+  .menu {
+    left: 85%;
+  }
 }
 
 @media screen and (min-width: 650px) {
-  .links.open {
-    margin-top: 90px;
+  .menu {
+    left: 90%;
   }
 }
 @media screen and (min-width: 820px) {
   .Navbar {
     justify-content: space-between;
+    position: absolute;
+    top: 80%;
   }
+  .desktop1,
+  .desktop2 {
+    display: flex;
+    gap: 40px;
+  }
+  /* .portfolio {
+    margin-left: 220px;
+  } */
   .links ul .mobileIcons {
     display: none;
   }
   .links ul {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 28vw;
     padding-right: 10px;
+    font-size: 13px;
   }
 
   .menu {
@@ -129,17 +156,50 @@ a:hover {
 
   .links {
     display: flex;
-    align-items: center; /* Center the links horizontally */
+    /* Center the links horizontally */
+  }
+  .toggle {
+    width: 40px;
+    height: 20px;
+  }
+  .lang {
+    width: 40px;
+    height: 100%;
   }
 
   /* .links.open {
     display: none;
   } */
 }
+
+@media screen and (min-width: 900px) {
+  /* .portfolio {
+    margin-left: 280px;
+  } */
+}
 @media screen and (min-width: 1000px) {
+  /* .portfolio {
+    margin-left: 230px;
+  } */
   .links ul {
-    gap: 40px;
+    gap: 30vw;
     padding-right: 40px;
+    font-size: 16px;
+  }
+  .toggle {
+    width: 50px;
+    height: 23px;
+  }
+  .lang {
+    width: 55px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ul {
+    display: flex;
+    gap: 200px;
   }
 }
 

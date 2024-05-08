@@ -1,11 +1,10 @@
 .header {
-  background: #9a9fe9;
-  box-shadow: 0px 1px 12px 20px #9a9fe9;
-  padding: 2px 10px;
+  background: #c2fdd4;
+  box-shadow: 0px 1px 12px 20px #c2fdd4;
   display: flex;
-  /* position: relative; */
+  position: relative;
   justify-content: space-between;
-  align-items: center;
+  height: 40px;
 }
 
 .dark .header {
@@ -21,6 +20,7 @@
   position: absolute;
   transform: translateY(-19%);
   z-index: 2;
+  cursor: pointer;
 }
 
 .icons {
@@ -30,6 +30,7 @@
 @media screen and (min-width: 650px) {
   .header .logo {
     width: 250px;
+    top: 60%;
 
     /* transform: translateY(-10%); */
   }
@@ -38,14 +39,28 @@
   .icons {
     display: flex;
     gap: 5px;
+    align-items: center;
     flex-direction: row;
     cursor: pointer;
+    position: absolute;
+    left: 89%;
+    top: 75%;
+  }
+  .logo {
+    left: 32%;
+    top: 58%;
+  }
+  .header {
+    padding-left: 8%;
   }
 
   .toggle,
   .lang {
-    width: 50px;
-    height: 50px;
     cursor: pointer;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .icons {
+    top: 50%;
   }
 }
