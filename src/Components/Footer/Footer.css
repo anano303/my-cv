@@ -5,9 +5,14 @@ body.en .footer p {
   margin-left: 50%;
 }
 .footer p {
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 500;
   position: absolute;
   bottom: -10px;
   margin-left: 60%;
+  color: #f7bfd9;
+  text-shadow: 1px 1px 0 #b06f98, 1px 1px 0 #b06f98, 1px 1px 0 #b06f98,
+    1px 1px 0 #b06f98;
 }
 .footer img {
   width: 100%;
