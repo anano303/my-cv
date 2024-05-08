@@ -31,6 +31,19 @@ const Navbar = () => {
     const newLanguage = language === "ge" ? "en" : "ge";
     setLanguage(newLanguage); // Use setLanguage from LanguageContext to update the language
   };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 820) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="Navbar">
