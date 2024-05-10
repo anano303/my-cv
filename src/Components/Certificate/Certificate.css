@@ -1,0 +1,80 @@
+/* .certificate-image {
+  height: 70vh;
+  object-fit: cover;
+} */
+.certificates > h1 {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-image:hover {
+  cursor: pointer;
+}
+.certificates-box {
+  display: grid;
+  grid-row: row;
+}
+
+.certificate {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+  cursor: pointer;
+  border: 1px solid rgb(104, 186, 104);
+  padding: 2px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px green;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-x: auto; /* Enable scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modal-image {
+  margin-right: 10px;
+  max-height: 70vh;
+  width: 70vw;
+}
+.modal.row {
+  flex-direction: row;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+.icon {
+  width: 130px;
+  height: 80px;
+  align-self: center;
+  object-fit: contain;
+}
+@media screen and (min-width: 600px) {
+  .certificates-box {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
