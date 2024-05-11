@@ -1,0 +1,90 @@
+.portfolioo {
+  margin-top: 120px;
+  color: #165b66;
+}
+.portfolioo h2 {
+  text-align: center;
+  font-family: "Nothing You Could Do", cursive;
+}
+
+.projects {
+  display: flex;
+  row-gap: 20px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.project {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 5% 15%;
+  box-shadow: 3px 0px 12px 5px rgb(104, 186, 104);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project span {
+  position: absolute;
+  bottom: 10px;
+  left: -5px;
+  color: #c2fdd4;
+  font-weight: bold;
+  z-index: 3;
+  color: #042d30;
+  background-color: #c2fdd4;
+  border-radius: 5px;
+  width: 100%;
+  text-align: end;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: color 0.3s ease; /* Transition text color */
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 128, 0, 0.5); /* Transparent green color */
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.project:hover {
+  transform: scale(1.05); /* Scale the project on hover */
+  box-shadow: 10px 10px 12px 0px rgb(232, 232, 120);
+}
+
+.dark .project:hover {
+  transform: scale(1.05); /* Scale the project on hover */
+  box-shadow: 10px 10px 12px 0px #c2fdd4; /* Add box-shadow on hover */
+}
+
+.project:hover::before {
+  background-color: transparent; /* Remove color on hover */
+}
+
+.project:hover span {
+  color: #c2fdd4;
+  background-color: #042d30; /* Change text color on hover */
+}
