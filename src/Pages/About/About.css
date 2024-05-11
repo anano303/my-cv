@@ -8,10 +8,10 @@
 .aboutMe {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 .aboutMe img {
-  height: 400px;
+  height: 300px;
   border-radius: 0px 10px 50%;
 }
 .aboutMe p {
@@ -62,11 +62,22 @@
   }
 }
 
+@media screen and (min-width: 620px) {
+  .aboutMe img {
+    height: 350px;
+  }
+  .aboutMe {
+    flex-direction: row;
+    align-items: end;
+  }
+}
+
 @media screen and (min-width: 820px) {
   .about {
     padding-top: 120px;
   }
-  .aboutMe {
-    flex-direction: row;
+
+  .aboutMe img {
+    height: 400px;
   }
 }
