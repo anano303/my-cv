@@ -62,7 +62,7 @@
   }
 }
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 700px) {
   .aboutMe img {
     height: 350px;
   }
