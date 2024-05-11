@@ -14,6 +14,7 @@
   border-radius: 10px;
   text-align: center;
   color: rgb(240, 180, 204);
+  font-size: 2vh;
 }
 .about span {
   font-weight: bold;
@@ -23,11 +24,7 @@
   border-bottom: 2px dotted rgb(143, 225, 221);
   border-radius: 50px 0px;
 }
-.about > .cv > .experience > .job {
-  border-bottom: 3px dotted rgb(143, 225, 221);
-  border-radius: 50px 0px;
-}
-.job {
+.about .job {
   border-bottom: 2px dotted rgb(143, 225, 221);
   border-radius: 50px 0px;
 }
@@ -42,5 +39,6 @@
 @media screen and (min-width: 375px) {
   .cv {
     flex-direction: row;
+    justify-content: space-around;
   }
 }

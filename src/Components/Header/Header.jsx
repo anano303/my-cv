@@ -8,7 +8,7 @@ import ToggleOff from "../../assets/Sky Switch - Light.png";
 import geo from "../../assets/Georgia.png";
 import eng from "../../assets/USA.png";
 import { ThemeContext } from "../../Hooks/ThemeContext";
-import logo from "../../assets/thumbnail_anano without background.png";
+import logo from "../../assets/anano logo another.png";
 import darkLogo from "../../assets/darkLogo.png";
 import { Link } from "react-router-dom";
 

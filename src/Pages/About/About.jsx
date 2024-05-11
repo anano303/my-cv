@@ -97,51 +97,51 @@ const About = () => {
         </div>
         <div className="experience">
           <h2> სამუშაო გამოცდილება</h2>
-          <div classname="job job1">
+          <div className="job job1">
             <h3>2015-დღემდე</h3>
             <p>
               <span>სადაზღვევო კომპანია პრაიმი</span>კორპორატიული გაყიდვების
               მენეჯერი
             </p>
           </div>
-          <div classname="job job2">
+          <div className="job job2">
             <h3>2020-დღემდე</h3>
             <p>
               <span>ალდაგი</span>აგროდაზღვევის გაყიდვების მენეჯერი
             </p>
           </div>
-          <div classname="job job3">
+          <div className="job job3">
             <h3>2020-2023</h3>
             <p>
               <span>სადაზღვევო კომპანია ნიუვიჟენი</span>აგროდაზღვევის გაყიდვების
               მენეჯერი
             </p>
           </div>
-          <div classname="job job4">
+          <div className="job job4">
             <h3>2021-2023</h3>
             <p>
               <span>ლიბერთი ბანკი</span>აგროდაზღვევის სესხების ოფიცერი
             </p>
           </div>
-          <div classname="job job5">
+          <div className="job job5">
             <h3>2021-2023</h3>
             <p>
               <span>კრისტალი</span>აგროდაზღვევის სესხების ოფიცერი
             </p>
           </div>
-          <div classname="job job6">
+          <div className="job job6">
             <h3>2016-2020</h3>
             <p>
               <span>ჯიპიაი ჰოლდინგი</span>აგროდაზღვევის გაყიდვების მენეჯერი
             </p>
           </div>
-          <div classname="job job7">
+          <div className="job job7">
             <h3>2016-2020</h3>
             <p>
               <span>ფინკა ბანკი</span>აგროდაზღვევის სესხების ექსპერტი
             </p>
           </div>
-          <div classname="job job8">
+          <div className="job job8">
             <h3>2012-2015</h3>
             <p>
               <span>ჯიპიაი ჰოლდინგი</span>საცალო გაყიდვების სპეციალისტი
