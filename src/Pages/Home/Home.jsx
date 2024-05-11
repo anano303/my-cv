@@ -1,4 +1,4 @@
-import MyImage from "../../assets/image.png";
+import MyImage from "../../assets/me.png";
 import "./Home.css";
 import cv from "../../assets/cv.pdf";
 import { TEXTS } from "../../Hooks/Languages";

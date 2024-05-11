@@ -1,9 +1,30 @@
 import "./About.css";
 import Certificate from "../../Components/Certificate/Certificate";
-
+import aboutImage from "./aboutMe.png";
 const About = () => {
   return (
     <div className="about">
+      <div className="aboutMe">
+        <div className="myImg">
+          <img alt="myImage" src={aboutImage} />
+        </div>
+        <div className="aboutText">
+          {" "}
+          <p>
+            Hello! I'm Ani, a dedicated professional with a passion for
+            continuous growth and learning. With a solid foundation in insurance
+            sales since 2012, I've honed my skills in communication,
+            negotiation, and client relationship management. In 2023, I embarked
+            on an exciting journey into the world of development, driven by my
+            curiosity and eagerness to explore new horizons. Since then, I've
+            been immersing myself in various aspects of development, from web
+            technologies to programming languages. My transition into
+            development reflects my commitment to personal and professional
+            development, as well as my enthusiasm for embracing challenges and
+            seizing opportunities for growth.{" "}
+          </p>
+        </div>
+      </div>
       <div className="cv">
         <div className="education">
           <h2> განათლება/ტრენინგები</h2>

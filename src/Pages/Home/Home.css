@@ -13,7 +13,7 @@
 }
 .myImage {
   height: 130px;
-  border-radius: 0% 10% 30%;
+  border-radius: 0% 70% 30%;
 }
 
 .text,
@@ -119,11 +119,11 @@
     margin-top: 100px;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 5vw;
   }
   .myImage {
-    height: 250px;
+    height: 400px;
   }
   .text {
     max-width: 500px;
