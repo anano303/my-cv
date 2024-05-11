@@ -2,6 +2,9 @@
   padding: 80px 20px;
   color: #486e74;
 }
+.dark .about {
+  color: #c2fdd4;
+}
 .about h2 {
   margin-bottom: 50px;
 }
@@ -20,13 +23,14 @@
   font-weight: bold;
   display: inherit;
 }
-.about .edu {
-  border-bottom: 2px dotted rgb(143, 225, 221);
-  border-radius: 50px 0px;
-}
+.about .edu,
 .about .job {
   border-bottom: 2px dotted rgb(143, 225, 221);
   border-radius: 50px 0px;
+  margin-bottom: 60px;
+}
+.about .job {
+  padding-right: 30px;
 }
 
 .cv {
@@ -40,5 +44,11 @@
   .cv {
     flex-direction: row;
     justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .about {
+    padding-top: 120px;
   }
 }

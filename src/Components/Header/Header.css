@@ -20,6 +20,7 @@
   position: absolute;
   transform: translateY(-30%);
   cursor: pointer;
+  z-index: 3;
 }
 
 .icons {
@@ -48,6 +49,9 @@
   .logo {
     left: 25%;
     top: 58%;
+  }
+  .dark .logo {
+    top: 20px;
   }
   .header {
     padding-left: 8%;
