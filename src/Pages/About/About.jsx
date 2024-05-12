@@ -1,6 +1,8 @@
 import "./About.css";
 import Certificate from "../../Components/Certificate/Certificate";
 import aboutImage from "./aboutMe.png";
+import Skills from "../../Components/Skills/Skills";
+
 const About = () => {
   return (
     <div className="about">
@@ -173,7 +175,10 @@ const About = () => {
       <div className="certificates">
         <Certificate />
       </div>
-      <div className="skills"></div>
+      <div className="skillsAbout">
+        <h1>Skills</h1>
+        <Skills />
+      </div>
     </div>
   );
 };

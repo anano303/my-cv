@@ -46,6 +46,19 @@
 .about .job {
   padding-right: 30px;
 }
+.skillsAbout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.skillsAbout h1 {
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
 .cv {
   display: flex;

@@ -1,0 +1,58 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15vw;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px dotted #4169e1;
+  border-radius: 40% 0px;
+}
+
+.skill .iconSkills {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+
+.name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.level-indicator {
+  display: flex;
+}
+
+.star {
+  color: pink; /* Color of the stars */
+  font-size: 1.5rem; /* Adjust size of stars */
+  margin-right: 5px; /* Spacing between stars */
+}
+
+.level-bar {
+  width: 100px; /* Width of the skill level bar */
+  height: 10px; /* Height of the skill level bar */
+  background-color: lightgray; /* Background color of the skill level bar */
+  border-radius: 5px;
+}
+
+.level-fill {
+  height: 100%;
+  background-color: pink;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 620px) {
+  .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8vw;
+  }
+}
