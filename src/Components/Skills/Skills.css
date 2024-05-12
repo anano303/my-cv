@@ -31,15 +31,15 @@
 }
 
 .star {
-  color: pink; /* Color of the stars */
-  font-size: 1.5rem; /* Adjust size of stars */
-  margin-right: 5px; /* Spacing between stars */
+  color: pink;
+  font-size: 1.5rem;
+  margin-right: 5px;
 }
 
 .level-bar {
-  width: 100px; /* Width of the skill level bar */
-  height: 10px; /* Height of the skill level bar */
-  background-color: lightgray; /* Background color of the skill level bar */
+  width: 100px;
+  height: 10px;
+  background-color: lightgray;
   border-radius: 5px;
 }
 
