@@ -80,16 +80,25 @@ const Portfolio = () => {
       <h2>My projects</h2>
       <div className="projects">
         {projects.map((project, index) => (
-          <div className="project" key={index}>
-            <a href={project.projectLink}>
+          <a
+            href={project.projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={index}
+            className="project"
+            onClick={() =>
+              console.log("Clicked project link:", project.projectLink)
+            }
+          >
+            <div className="projectDiv">
               <img
                 className="projectImage"
                 src={project.imageUrl}
                 alt={project.projectTitle}
               />
               <span>{project.projectTitle}</span>
-            </a>
-          </div>
+            </div>
+          </a>
         ))}
       </div>
     </div>
