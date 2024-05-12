@@ -4,17 +4,25 @@ import { LanguageContext } from "../../../Hooks/LanguageContext.js";
 import { useContext, useEffect, useState } from "react";
 import { TEXTS } from "../../../Hooks/Languages.js";
 import menu from "../../../assets/icons8-menu-bar-100.png";
-import ToggleOn from "../../../assets/Land Switch - Dark.png";
-import ToggleOff from "../../../assets/Sky Switch - Light.png";
 import geo from "../../../assets/Georgia.png";
 import eng from "../../../assets/USA.png";
 import close from "../../../assets/icons8-close-window-100.png";
 import { ThemeContext } from "../../../Hooks/ThemeContext.js";
+import moon from "../../Toggle/darkToggle.png";
+import sun from "../../Toggle/lightToggle.png";
+import ToggleSwitch from "../../Toggle/Toggle.jsx";
 
 const Navbar = () => {
   const { language, setLanguage } = useContext(LanguageContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const [isChecked, setIsChecked] = useState(theme === "dark");
+
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+    toggleTheme(); // Toggle theme
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -87,12 +95,14 @@ const Navbar = () => {
             </li>
           </div>
           <div className="mobileIcons">
-            <img
-              className="toggle"
-              src={theme === "light" ? ToggleOn : ToggleOff}
-              alt="toggle"
-              onClick={handleClick}
-            />
+            <div className="toggle">
+              <ToggleSwitch
+                checked={isChecked}
+                onChange={handleChange}
+                image={sun}
+                image2={moon}
+              />
+            </div>
             <img
               className="lang"
               src={language === "ge" ? eng : geo}

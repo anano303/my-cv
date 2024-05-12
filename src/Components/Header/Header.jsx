@@ -3,30 +3,38 @@ import { LanguageContext } from "../../Hooks/LanguageContext";
 
 import "./Header.css";
 import Navbar from "./Navbar/Navbar";
-import ToggleOn from "../../assets/Land Switch - Dark.png";
-import ToggleOff from "../../assets/Sky Switch - Light.png";
+// import ToggleOn from "../../assets/Land Switch - Dark.png";
+// import ToggleOff from "../../assets/Sky Switch - Light.png";
 import geo from "../../assets/Georgia.png";
 import eng from "../../assets/USA.png";
 import { ThemeContext } from "../../Hooks/ThemeContext";
 import logo from "../../assets/anano logo another.png";
 import darkLogo from "../../assets/image (1).png";
 import { Link } from "react-router-dom";
+import moon from "../Toggle/darkToggle.png";
+import sun from "../Toggle/lightToggle.png";
+import ToggleSwitch from "../Toggle/Toggle";
 
 const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
   // const [isOn, setIsOn] = useState(true);
   const { theme, toggleTheme } = useContext(ThemeContext); // Access ThemeContext
+  const [isChecked, setIsChecked] = useState(theme === "dark");
+
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+    toggleTheme(); // Toggle theme
+  };
 
   const handleLangClick = () => {
     const newLanguage = language === "ge" ? "en" : "ge";
     setLanguage(newLanguage); // Use setLanguage from LanguageContext to update the language
   };
-  const handleClick = () => {
-    // setIsOn((prevState) => !prevState);
-    // Toggle between 'dark' and 'light' themes
-    const newTheme = theme === "light" ? "dark" : "light";
-    toggleTheme(newTheme);
-  };
+  // const handleClick = () => {
+
+  //   const newTheme = theme === "light" ? "dark" : "light";
+  //   toggleTheme(newTheme);
+  // };
 
   return (
     <div className="header">
@@ -40,12 +48,19 @@ const Header = () => {
         </Link>{" "}
         <Navbar />
         <div className="icons">
-          <img
+          <div
             className="toggle"
-            src={theme === "light" ? ToggleOn : ToggleOff}
-            alt="toggle"
-            onClick={handleClick}
-          />
+            // src={theme === "light" ? ToggleOn : ToggleOff}
+            // alt="toggle"
+            // onClick={handleClick}
+          >
+            <ToggleSwitch
+              checked={isChecked}
+              onChange={handleChange}
+              image={sun}
+              image2={moon}
+            />
+          </div>
           <img
             className="lang"
             src={language === "ge" ? eng : geo}
