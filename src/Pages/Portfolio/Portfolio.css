@@ -1,6 +1,12 @@
 .portfolioo {
   margin-top: 120px;
   color: #165b66;
+  text-transform: uppercase;
+  line-height: 2px;
+}
+.dark .portfolioo {
+  color: #c2fdd4;
+  text-transform: uppercase;
 }
 .portfolioo h2 {
   text-align: center;
@@ -9,8 +15,8 @@
 
 .projects {
   display: flex;
-  row-gap: 20px;
-  column-gap: 20px;
+  row-gap: 5vw;
+  column-gap: 5vh;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 120px;
@@ -20,11 +26,12 @@
   position: relative;
   cursor: pointer;
   width: 170px;
-  height: 170px;
+  height: 250px;
   overflow: hidden;
-  border-radius: 5% 15%;
-  box-shadow: 3px 0px 12px 5px rgb(104, 186, 104);
+  border-radius: 1px 1px 50px 1px;
+  /* box-shadow: 1px 0px 12px 5px rgb(36, 37, 36); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #c2fdd4;
 }
 
 .project a {
@@ -37,14 +44,18 @@
 
 .projectDiv img {
   width: 170px;
-  height: 170px;
+  height: 250px;
   object-fit: cover;
 }
 
 .project span {
   position: absolute;
   bottom: 10px;
-  left: -5px;
+  left: -15px;
+  padding-right: 12px;
+  align-items: center;
+  display: flex;
+  justify-content: end;
   color: #c2fdd4;
   font-weight: bold;
   z-index: 3;
@@ -52,7 +63,10 @@
   background-color: #c2fdd4;
   border-radius: 5px;
   width: 100%;
+  height: 15%;
   text-align: end;
+  opacity: 0.9;
+  font-size: 2vw;
 
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   transition: color 0.3s ease; /* Transition text color */
@@ -65,9 +79,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 128, 0, 0.5); /* Transparent green color */
+  background-color: rgba(36, 37, 36, 0.5); /* Transparent green color */
   transition: background-color 0.3s ease;
   z-index: 1;
+  /* transform: rotateY(180deg); */
 }
 
 .project:hover {
@@ -81,7 +96,7 @@
 }
 
 .project:hover::before {
-  background-color: transparent; /* Remove color on hover */
+  background-color: transparent;
 }
 
 .project:hover span {
@@ -93,7 +108,7 @@
   .projectDiv img,
   .project {
     width: 250px;
-    height: 250px;
+    height: 320px;
     object-fit: cover;
   }
 }
@@ -101,7 +116,7 @@
   .projectDiv img,
   .project {
     width: 450px;
-    height: 450px;
+    height: 550px;
     object-fit: cover;
   }
 }

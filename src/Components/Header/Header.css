@@ -18,9 +18,12 @@
 .logo {
   width: 150px;
   position: absolute;
-  transform: translateY(-30%);
+  transform: translateY(-20%);
   cursor: pointer;
   z-index: 100;
+}
+.dark .logo {
+  transform: translateY(-10%);
 }
 
 .icons {
@@ -49,10 +52,9 @@
   .logo {
     left: 25%;
     top: 58%;
+    transform: translateY(-30%);
   }
-  .dark .logo {
-    top: 20px;
-  }
+
   .header {
     padding-left: 8%;
   }
