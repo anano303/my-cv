@@ -24,6 +24,7 @@
 
 .dark .open {
   background-color: black;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
 }
 
 .open {
@@ -36,6 +37,7 @@
   animation: slideDown 0.9s ease forwards;
   opacity: 0.99;
   z-index: 50;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
 }
 
 .open ul {
