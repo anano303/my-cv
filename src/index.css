@@ -32,6 +32,7 @@ body.ge {
   background-position: top;
   background-size: cover;
   background-image: url("drop.png");
+  transition: background-color 0.5s ease; /* Add transition for background-color */
 }
 
 .dark {
@@ -40,6 +41,7 @@ body.ge {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  transition: background-color 0.5s ease; /* Add transition for background-color */
 }
 
 @font-face {
