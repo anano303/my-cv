@@ -48,6 +48,15 @@
   object-fit: cover;
 }
 
+.dark .projectDiv img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+.dark .project:hover .projectDiv img {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+
 .project span {
   position: absolute;
   bottom: 10px;
@@ -103,6 +112,25 @@
   color: #c2fdd4;
   background-color: #042d30; /* Change text color on hover */
 }
+
+/* .project::before {
+  content: "Open Link"; 
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  width: 100%;
+  background-color: rgba(255, 255, 0, 0.8); 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  text-align: center;
+  transform: translateY(100%); 
+  transition: transform 0.3s ease, bottom 0.3s ease; 
+}
+
+.project:hover::before {
+  transform: translateY(0);
+  bottom: 0; 
+} */
 
 @media screen and (min-width: 600px) {
   .projectDiv img,
