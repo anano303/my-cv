@@ -8,9 +8,10 @@
   color: #c2fdd4;
   text-transform: uppercase;
 }
-.portfolioo h2 {
+.portfolioo h1 {
   text-align: center;
   font-family: "Nothing You Could Do", cursive;
+  letter-spacing: 5px;
 }
 
 .projects {
