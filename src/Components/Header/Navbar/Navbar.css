@@ -126,6 +126,9 @@ a:hover {
   .menu {
     left: 90%;
   }
+  .open ul {
+    margin-top: 15%;
+  }
 }
 @media screen and (min-width: 820px) {
   .Navbar {
