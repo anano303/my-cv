@@ -10,7 +10,7 @@ import certificate8 from "./icons/sertificates/1000061601.jpg";
 import icon1 from "./icons/Prime.jpg";
 import icon2 from "./icons/development.jpg";
 import icon3 from "./icons/sales.jpeg";
-import icon4 from "./icons/sales.jpeg";
+import icon4 from "./icons/managment.jpg";
 import icon5 from "./icons/magistr.png";
 import icon6 from "./icons/bacal.png";
 import "./Certificate.css";
