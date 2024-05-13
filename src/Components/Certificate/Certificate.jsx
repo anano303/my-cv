@@ -12,6 +12,14 @@ import icon4 from "./icons/sales.jpeg";
 import icon5 from "./icons/magistr.png";
 import icon6 from "./icons/bacal.png";
 import "./Certificate.css";
+import prime1 from "./icons/sertificates/1000061602.jpg";
+import prime2 from "./icons/sertificates/1000061603.jpg";
+import prime3 from "./icons/sertificates/1000061604.jpg";
+import prime4 from "./icons/sertificates/1000061605.jpg";
+import prime5 from "./icons/sertificates/1000061606.jpg";
+import prime6 from "./icons/sertificates/1000061607.jpg";
+import prime7 from "./icons/sertificates/1000061608.jpg";
+import prime8 from "./icons/sertificates/1000061609.jpg";
 
 const Certificates = () => {
   const [selectedCertificates, setSelectedCertificates] = useState([]);
@@ -35,12 +43,27 @@ const Certificates = () => {
     certificate6,
   ];
 
+  const primeCertificates = [
+    prime1,
+    prime2,
+    prime3,
+    prime4,
+    prime5,
+    prime6,
+    prime7,
+    prime8,
+  ];
+
   const handleClick = (divId) => {
     if (divId === 1) {
-      setSelectedCertificates(certificates);
+      setSelectedCertificates(primeCertificates);
       setShowScroll(true);
     } else {
-      setSelectedCertificates([certificates[divId - 1]]);
+      const selectedCerts = [];
+      for (let i = 0; i < 5; i++) {
+        if (certificates[i]) selectedCerts.push(certificates[i]);
+      }
+      setSelectedCertificates(selectedCerts);
       setShowScroll(false);
     }
   };
@@ -60,15 +83,13 @@ const Certificates = () => {
             onClick={() => handleClick(div.id)}
             className="certificate"
           >
-            <img className="icon" alt="icon" key={div.id} src={div.icon} />
+            <img className="icon" alt="icon" src={div.icon} />
             <p>{div.text}</p>
           </div>
         ))}
         {selectedCertificates.length > 0 && (
           <div
-            className={`modal ${showScroll ? "scroll" : ""} ${
-              showScroll && selectedCertificates.length === 5 ? "row" : ""
-            }`}
+            className={`modal ${showScroll ? "scroll" : ""}`}
             onClick={handleClose}
           >
             {selectedCertificates.map((certificate, index) => (
