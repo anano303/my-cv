@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import certificate1 from "./certificate1.jpg";
-import certificate2 from "./certificate2.jpg";
-import certificate3 from "./certificate3.jpg";
-import certificate4 from "./certificate4.jpg";
-import certificate5 from "./certificate5.jpg";
-import certificate6 from "./certificate6.jpg";
+import certificate2 from "./gtu.jpg";
+import certificate3 from "./it step.jpg";
+import certificate4 from "./magist.jpg";
+import certificate5 from "./bacal.jpg";
+import certificate6 from "./icons/sertificates/1000061599.jpg";
+import certificate7 from "./icons/sertificates/1000061600.jpg";
+import certificate8 from "./icons/sertificates/1000061601.jpg";
 import icon1 from "./icons/Prime.jpg";
 import icon2 from "./icons/development.jpg";
 import icon3 from "./icons/sales.jpeg";
@@ -35,12 +37,11 @@ const Certificates = () => {
   ];
 
   const certificates = [
-    certificate1,
+    [certificate1, certificate3],
+    [certificate6, certificate7, certificate8],
     certificate2,
-    certificate3,
     certificate4,
     certificate5,
-    certificate6,
   ];
 
   const primeCertificates = [
@@ -59,11 +60,10 @@ const Certificates = () => {
       setSelectedCertificates(primeCertificates);
       setShowScroll(true);
     } else {
-      const selectedCerts = [];
-      for (let i = 0; i < 1; i++) {
-        if (certificates[i]) selectedCerts.push(certificates[i]);
-      }
-      setSelectedCertificates(selectedCerts);
+      const selectedCerts = certificates[divId - 2]; // Subtract 2 because divId starts from 2
+      setSelectedCertificates(
+        Array.isArray(selectedCerts) ? selectedCerts : [selectedCerts]
+      );
       setShowScroll(false);
     }
   };
