@@ -60,7 +60,7 @@ const Certificates = () => {
       setShowScroll(true);
     } else {
       const selectedCerts = [];
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 1; i++) {
         if (certificates[i]) selectedCerts.push(certificates[i]);
       }
       setSelectedCertificates(selectedCerts);
