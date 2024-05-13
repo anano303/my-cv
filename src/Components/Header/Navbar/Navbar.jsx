@@ -30,10 +30,10 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const handleClick = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    toggleTheme(newTheme);
-  };
+  // const handleClick = () => {
+  //   const newTheme = theme === "light" ? "dark" : "light";
+  //   toggleTheme(newTheme);
+  // };
 
   const handleLangClick = () => {
     const newLanguage = language === "ge" ? "en" : "ge";

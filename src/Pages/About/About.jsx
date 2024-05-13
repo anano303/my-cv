@@ -2,8 +2,13 @@ import "./About.css";
 import Certificate from "../../Components/Certificate/Certificate";
 import aboutImage from "./aboutMe.png";
 import Skills from "../../Components/Skills/Skills";
+import { TEXTS } from "../../Hooks/Languages.js";
+import { LanguageContext } from "../../Hooks/LanguageContext.js";
+import { useContext } from "react";
 
 const About = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div className="about">
       <div className="aboutMe">
@@ -29,26 +34,27 @@ const About = () => {
       </div>
       <div className="cv">
         <div className="education">
-          <h2> განათლება/ტრენინგები</h2>
+          <h2>{TEXTS[language].education} </h2>
           <div className="edu edu1">
             <h3>2023-2024</h3>
             <p>
               {" "}
-              <span>სქილვილი </span> ფრონტ-ენდ-დეველოპმენტი/რეაქთი,რეაქთ-ნეითივი
+              <span>{TEXTS[language].skillwill}</span> {TEXTS[language].front}
             </p>
           </div>
           <div className="edu edu2">
             <h3>2023-2024</h3>
             <p>
               {" "}
-              <span>აიტი აკადემია სტეპი </span> ფრონტ-ენდ-დეველოპმენტი/ანგულარი
+              <span>{TEXTS[language].step} </span> {TEXTS[language].angular}
             </p>
           </div>
           <div className="edu edu3">
             <h3>2022-2023</h3>
             <p>
               {" "}
-              <span>ბითქემფი </span> ფრონტ-ენდ-დეველოპმენტი/რეაქთი
+              <span>{TEXTS[language].bitcamp} </span>{" "}
+              {TEXTS[language].frontBitcamp}
             </p>
           </div>
 
@@ -119,7 +125,7 @@ const About = () => {
           </div>
         </div>
         <div className="experience">
-          <h2> სამუშაო გამოცდილება</h2>
+          <h2> {TEXTS[language].experience}</h2>
           <div className="job job1">
             <h3>2015-დღემდე</h3>
             <p>

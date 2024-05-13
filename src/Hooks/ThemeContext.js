@@ -14,16 +14,6 @@ export const ThemeProvider = ({ children }) => {
     }
   }, [theme]);
 
-  //     const font = new FontFace(
-  //       "supreme",
-  //       "url(./Fonts/5ZZU4JM62PS7KOJ7BOKLPL3AEO2G76TS.woff2) )"
-  //     );
-  //     font.load().then(() => {
-  //       document.fonts.add(font);
-  //       applyFont();
-  //     });
-  //   }, [language]);
-
   const contextValue = {
     theme,
     toggleTheme: (newTheme) => {

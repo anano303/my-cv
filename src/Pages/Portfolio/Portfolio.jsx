@@ -1,5 +1,7 @@
-import React from "react";
 import "./Portfolio.css";
+import { TEXTS } from "../../Hooks/Languages.js";
+import { LanguageContext } from "../../Hooks/LanguageContext.js";
+import { useContext, React } from "react";
 import blueprintImage from "./my projects/blueprint.jpg";
 import clipboardImage from "./my projects/9.jpg";
 import clipboardImage2 from "./my projects/8.jpg";
@@ -13,6 +15,8 @@ import clipboardImage9 from "./my projects/bagis page.png";
 import clipboardImage10 from "./my projects/1.jpg";
 
 const Portfolio = () => {
+  const { language } = useContext(LanguageContext);
+
   const projects = [
     {
       imageUrl: blueprintImage,

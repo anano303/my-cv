@@ -3,7 +3,7 @@ import "./Toggle.css";
 
 const ToggleSwitch = ({ checked, onChange, onClick, image, image2 }) => {
   const sliderStyle = {
-    backgroundImage: checked ? `url(${image})` : `url(${image2})`, // Set the background image
+    backgroundImage: checked ? `url(${image})` : `url(${image2})`,
     backgroundSize: "cover",
   };
 

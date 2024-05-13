@@ -10,7 +10,6 @@ import { useContext } from "react";
 
 const Contact = () => {
   const { language, setLanguage } = useContext(LanguageContext);
-  // State variables to store form data
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");

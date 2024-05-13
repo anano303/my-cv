@@ -1,10 +1,7 @@
 import React, { useContext, useState } from "react";
 import { LanguageContext } from "../../Hooks/LanguageContext";
-
 import "./Header.css";
 import Navbar from "./Navbar/Navbar";
-// import ToggleOn from "../../assets/Land Switch - Dark.png";
-// import ToggleOff from "../../assets/Sky Switch - Light.png";
 import geo from "../../assets/Georgia.png";
 import eng from "../../assets/USA.png";
 import { ThemeContext } from "../../Hooks/ThemeContext";
@@ -17,7 +14,6 @@ import ToggleSwitch from "../Toggle/Toggle";
 
 const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
-  // const [isOn, setIsOn] = useState(true);
   const { theme, toggleTheme } = useContext(ThemeContext); // Access ThemeContext
   const [isChecked, setIsChecked] = useState(theme === "dark");
 
@@ -48,12 +44,7 @@ const Header = () => {
         </Link>{" "}
         <Navbar />
         <div className="icons">
-          <div
-            className="toggle"
-            // src={theme === "light" ? ToggleOn : ToggleOff}
-            // alt="toggle"
-            // onClick={handleClick}
-          >
+          <div className="toggle">
             <ToggleSwitch
               checked={isChecked}
               onChange={handleChange}
