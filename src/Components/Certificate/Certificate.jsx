@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import certificate1 from "./certificate1.jpg";
 import certificate2 from "./gtu.jpg";
 import certificate3 from "./it step.jpg";
@@ -22,18 +22,22 @@ import prime5 from "./icons/sertificates/1000061606.jpg";
 import prime6 from "./icons/sertificates/1000061607.jpg";
 import prime7 from "./icons/sertificates/1000061608.jpg";
 import prime8 from "./icons/sertificates/1000061609.jpg";
+import { TEXTS } from "../../Hooks/Languages";
+import { LanguageContext } from "../../Hooks/LanguageContext";
 
 const Certificates = () => {
+  const { language } = useContext(LanguageContext);
+
   const [selectedCertificates, setSelectedCertificates] = useState([]);
   const [showScroll, setShowScroll] = useState(false);
 
   const divs = [
-    { id: 1, icon: icon1, text: "სადაზღვევო კომპანია პრაიმი" },
-    { id: 2, icon: icon2, text: "Front-End Development" },
-    { id: 3, icon: icon3, text: "გაყიდვები" },
-    { id: 4, icon: icon4, text: "მენეჯმენტი" },
-    { id: 5, icon: icon5, text: "მაგისტრატურა" },
-    { id: 6, icon: icon6, text: "ბაკალავრიატი" },
+    { id: 1, icon: icon1, text: TEXTS[language].prime },
+    { id: 2, icon: icon2, text: "FRONT-END DEVELOPMENT" },
+    { id: 3, icon: icon3, text: TEXTS[language].sales },
+    { id: 4, icon: icon4, text: TEXTS[language].management },
+    { id: 5, icon: icon5, text: TEXTS[language].magistr },
+    { id: 6, icon: icon6, text: TEXTS[language].bacal },
   ];
 
   const certificates = [
@@ -75,7 +79,7 @@ const Certificates = () => {
 
   return (
     <div className="certificates">
-      <h1>სერთიფიკატები</h1>
+      <h1>{TEXTS[language].certificates}</h1>
       <div className="certificates-box">
         {divs.map((div) => (
           <div

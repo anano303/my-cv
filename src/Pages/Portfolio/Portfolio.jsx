@@ -81,7 +81,7 @@ const Portfolio = () => {
 
   return (
     <div className="portfolioo">
-      <h1>My projects</h1>
+      <h1>{TEXTS[language].projects}</h1>
       <div className="projects">
         {projects.map((project, index) => (
           <a

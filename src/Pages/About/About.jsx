@@ -62,7 +62,8 @@ const About = () => {
             <h3>2020</h3>
             <p>
               {" "}
-              <span>დავით ჩიკვაიძე </span> გაყიდვების ტექნიკები
+              <span>{TEXTS[language].davidChikvaidze} </span>{" "}
+              {TEXTS[language].salesTech}
             </p>
           </div>
 
@@ -70,7 +71,8 @@ const About = () => {
             <h3>2019</h3>
             <p>
               {" "}
-              <span>თათია ტურაშვილი</span> სერვის მენეჯმენტი
+              <span>{TEXTS[language].tatiaTura}</span>{" "}
+              {TEXTS[language].serviceMang}
             </p>
           </div>
 
@@ -78,8 +80,7 @@ const About = () => {
             <h3>2016</h3>
             <p>
               {" "}
-              <span>მართვის აკადემია/ალექსანდრე ჯეჯელავა </span> ეფექტური
-              კომუნიკაცია და დროის მართვა
+              <span>{TEXTS[language].jejelava}</span> {TEXTS[language].timeMang}
             </p>
           </div>
 
@@ -87,93 +88,95 @@ const About = () => {
             <h3>2014-2015</h3>
             <p>
               {" "}
-              <span>ჯიპიაი ჰოლდინგი </span> გაყიდვების ტექნიკები,გაყიდვების
-              მენეჯმენტი
+              <span>{TEXTS[language].gpi} </span>
+              {TEXTS[language].salesTech} / {TEXTS[language].salesMang}
             </p>
           </div>
           <div className="edu edu8">
             <h3>2013</h3>
             <p>
               {" "}
-              <span>საქართველოს ტექნიკური უნივერსიტეტი </span> უმაღლესი კლასის
-              მენეჯმენტი
+              <span>{TEXTS[language].uni} </span> {TEXTS[language].hlv}
             </p>
           </div>
           <div className="edu edu9">
             <h3>2013-2015</h3>
             <p>
               {" "}
-              <span>საქართველოს ტექნიკური უნივერსიტეტი </span>{" "}
-              ბიზნეს-ადმინისტრირების მაგისტრი
+              <span>{TEXTS[language].uni} </span> {TEXTS[language].specMagistr}
             </p>
           </div>
           <div className="edu edu10">
             <h3>2010-2013</h3>
             <p>
               {" "}
-              <span>საქართველოს ტექნიკური უნივერსიტეტი </span> ტელე-რადიო
-              ჟურნალისტიკა, ბაკალავრი
+              <span>{TEXTS[language].uni} </span> {TEXTS[language].specBacal1}
             </p>
           </div>
           <div className="edu edu11">
             <h3>2009-2013</h3>
             <p>
               {" "}
-              <span>საქართველოს ტექნიკური უნივერსიტეტი </span>{" "}
-              ბიზნეს-ადმინისტრირება, ბაკალავრი
+              <span>{TEXTS[language].uni}</span> {TEXTS[language].specbacal2}
             </p>
           </div>
         </div>
         <div className="experience">
           <h2> {TEXTS[language].experience}</h2>
           <div className="job job1">
-            <h3>2015-დღემდე</h3>
+            <h3>2015-{TEXTS[language].today}</h3>
             <p>
-              <span>სადაზღვევო კომპანია პრაიმი</span>კორპორატიული გაყიდვების
-              მენეჯერი
+              <span>{TEXTS[language].prime}</span>
+              {TEXTS[language].corp}
             </p>
           </div>
           <div className="job job2">
-            <h3>2020-დღემდე</h3>
+            <h3>2020-{TEXTS[language].today}</h3>
             <p>
-              <span>ალდაგი</span>აგროდაზღვევის გაყიდვების მენეჯერი
+              <span>{TEXTS[language].aldagi}</span>
+              {TEXTS[language].agro}
             </p>
           </div>
           <div className="job job3">
             <h3>2020-2023</h3>
             <p>
-              <span>სადაზღვევო კომპანია ნიუვიჟენი</span>აგროდაზღვევის გაყიდვების
-              მენეჯერი
+              <span>{TEXTS[language].nvi}</span>
+              {TEXTS[language].agro}
             </p>
           </div>
           <div className="job job4">
             <h3>2021-2023</h3>
             <p>
-              <span>ლიბერთი ბანკი</span>აგროდაზღვევის სესხების ოფიცერი
+              <span>{TEXTS[language].liberty}</span>
+              {TEXTS[language].agroCredit}
             </p>
           </div>
           <div className="job job5">
             <h3>2021-2023</h3>
             <p>
-              <span>კრისტალი</span>აგროდაზღვევის სესხების ოფიცერი
+              <span>{TEXTS[language].crystal}</span>
+              {TEXTS[language].agroCredit}
             </p>
           </div>
           <div className="job job6">
             <h3>2016-2020</h3>
             <p>
-              <span>ჯიპიაი ჰოლდინგი</span>აგროდაზღვევის გაყიდვების მენეჯერი
+              <span>{TEXTS[language].gpi}</span>
+              {TEXTS[language].agro}
             </p>
           </div>
           <div className="job job7">
             <h3>2016-2020</h3>
             <p>
-              <span>ფინკა ბანკი</span>აგროდაზღვევის სესხების ექსპერტი
+              <span>{TEXTS[language].finca}</span>
+              {TEXTS[language].agroCredit}
             </p>
           </div>
           <div className="job job8">
             <h3>2012-2015</h3>
             <p>
-              <span>ჯიპიაი ჰოლდინგი</span>საცალო გაყიდვების სპეციალისტი
+              <span>{TEXTS[language].gpi}</span>
+              {TEXTS[language].retailSale}
             </p>
           </div>
         </div>
