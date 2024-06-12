@@ -13,11 +13,17 @@ import clipboardImage7 from "./my projects/5.jpg";
 import clipboardImage8 from "./my projects/6.jpg";
 import clipboardImage9 from "./my projects/bagis page.png";
 import clipboardImage10 from "./my projects/1.jpg";
+import trainSite from "./my projects/train.jpg";
 
 const Portfolio = () => {
   const { language } = useContext(LanguageContext);
 
   const projects = [
+    {
+      imageUrl: trainSite,
+      projectTitle: "Train Railway",
+      projectLink: "https://train-tickets-nine.vercel.app/",
+    },
     {
       imageUrl: blueprintImage,
       projectTitle: "BluePrintStudio",
