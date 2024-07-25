@@ -13,6 +13,7 @@ import clipboardImage7 from "./my projects/5.jpg";
 import clipboardImage8 from "./my projects/6.jpg";
 import clipboardImage9 from "./my projects/bagis page.png";
 import clipboardImage10 from "./my projects/1.jpg";
+import tbc from "./my projects/tbc.jpg";
 import trainSite from "./my projects/train.jpg";
 
 const Portfolio = () => {
@@ -24,11 +25,18 @@ const Portfolio = () => {
       projectTitle: "Train Railway",
       projectLink: "https://train-tickets-nine.vercel.app/",
     },
+
     {
       imageUrl: blueprintImage,
       projectTitle: "BluePrintStudio",
       projectLink: "https://www.blueprintstudio.ge",
     },
+    {
+      imageUrl: tbc,
+      projectTitle: "Tbc concept",
+      projectLink: "https://anano303.github.io/TBC/",
+    },
+
     {
       imageUrl: clipboardImage,
       projectTitle: "Redberry Knight Cup",
