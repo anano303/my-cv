@@ -15,6 +15,7 @@ import clipboardImage9 from "./my projects/bagis page.png";
 import clipboardImage10 from "./my projects/1.jpg";
 import tbc from "./my projects/tbc.jpg";
 import trainSite from "./my projects/train.jpg";
+import bestSoft from "./my projects/bestSoft.jpg";
 
 const Portfolio = () => {
   const { language } = useContext(LanguageContext);
@@ -24,6 +25,12 @@ const Portfolio = () => {
       imageUrl: trainSite,
       projectTitle: "Train Railway",
       projectLink: "https://train-tickets-nine.vercel.app/",
+    },
+
+    {
+      imageUrl: bestSoft,
+      projectTitle: "BestSoft",
+      projectLink: "https://bestsoft.vercel.app/",
     },
 
     {

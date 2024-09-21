@@ -22,6 +22,7 @@ import prime5 from "./icons/sertificates/1000061606.jpg";
 import prime6 from "./icons/sertificates/1000061607.jpg";
 import prime7 from "./icons/sertificates/1000061608.jpg";
 import prime8 from "./icons/sertificates/1000061609.jpg";
+import stepSert from "./itStep.jpg";
 import { TEXTS } from "../../Hooks/Languages";
 import { LanguageContext } from "../../Hooks/LanguageContext";
 
@@ -41,7 +42,7 @@ const Certificates = () => {
   ];
 
   const certificates = [
-    [certificate1, certificate3],
+    [certificate1, certificate3, stepSert],
     [certificate6, certificate7, certificate8],
     certificate2,
     certificate4,

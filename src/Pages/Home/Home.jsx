@@ -32,11 +32,11 @@ const Home = () => {
           <img src={MyImage} alt="myImage" className="myImage" />
         </div>
       </div>
-      <div className="boxes">
+      {/* <div className="boxes">
         <img alt="img" src={img1} />
         <img alt="img" src={img2} />
         <img alt="img" src={img3} />
-      </div>
+      </div> */}
       <div className="sect2">
         <div className="text2">
           {" "}
