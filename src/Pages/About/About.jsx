@@ -6,8 +6,37 @@ import { TEXTS } from "../../Hooks/Languages.js";
 import { LanguageContext } from "../../Hooks/LanguageContext.js";
 import { useContext } from "react";
 
+
 const About = () => {
   const { language } = useContext(LanguageContext);
+const educationData = [
+  { year: "2024-" + TEXTS[language].today, institution: TEXTS[language].reEdu, course: TEXTS[language].backEnd },
+  { year: "2023-2024", institution: TEXTS[language].skillwill, course: TEXTS[language].front },
+  { year: "2023-2024", institution: TEXTS[language].step, course: TEXTS[language].angular },
+  { year: "2022-2023", institution: TEXTS[language].bitcamp, course: TEXTS[language].frontBitcamp },
+  { year: "2020", institution: TEXTS[language].davidChikvaidze, course: TEXTS[language].salesTech },
+  { year: "2019", institution: TEXTS[language].tatiaTura, course: TEXTS[language].serviceMang },
+  { year: "2016", institution: TEXTS[language].jejelava, course: TEXTS[language].timeMang },
+  { year: "2014-2015", institution: TEXTS[language].gpi, course: TEXTS[language].salesTech + " / " + TEXTS[language].salesMang },
+  { year: "2013", institution: TEXTS[language].uni, course: TEXTS[language].hlv },
+  { year: "2013-2015", institution: TEXTS[language].uni, course: TEXTS[language].specMagistr },
+  { year: "2010-2013", institution: TEXTS[language].uni, course: TEXTS[language].specBacal1 },
+  { year: "2009-2013", institution: TEXTS[language].uni, course: TEXTS[language].specbacal2 },
+];
+const experienceData = [
+  { year: "2024-" + TEXTS[language].today, company: TEXTS[language].step, position:  TEXTS[language].mentor },
+  { year: "2023-" + TEXTS[language].today, company: TEXTS[language].bestSoft, position: TEXTS[language].frontEnd },
+ { year: "2023-" + TEXTS[language].today, company: TEXTS[language].freelance, position: TEXTS[language].fullStack },
+  { year: "2015-" + TEXTS[language].today, company: TEXTS[language].prime, position: TEXTS[language].corp },
+  { year: "2020-" + TEXTS[language].today, company: TEXTS[language].aldagi, position: TEXTS[language].agro },
+  { year: "2020-2023", company: TEXTS[language].nvi, position: TEXTS[language].agro },
+  { year: "2021-2023", company: TEXTS[language].liberty, position: TEXTS[language].agroCredit },
+  { year: "2021-2023", company: TEXTS[language].crystal, position: TEXTS[language].agroCredit },
+  { year: "2016-2020", company: TEXTS[language].gpi, position: TEXTS[language].agro },
+  { year: "2016-2020", company: TEXTS[language].finca, position: TEXTS[language].agroCredit },
+  { year: "2012-2015", company: TEXTS[language].gpi, position: TEXTS[language].retailSale },
+];
+
 
   return (
     <div className="about">
@@ -33,154 +62,30 @@ const About = () => {
         </div>
       </div>
       <div className="cv">
-        <div className="education">
-          <h2>{TEXTS[language].education} </h2>
-          <div className="edu edu1">
-            <h3>2023-2024</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].skillwill}</span> {TEXTS[language].front}
-            </p>
-          </div>
-          <div className="edu edu2">
-            <h3>2023-2024</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].step} </span> {TEXTS[language].angular}
-            </p>
-          </div>
-          <div className="edu edu3">
-            <h3>2022-2023</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].bitcamp} </span>{" "}
-              {TEXTS[language].frontBitcamp}
-            </p>
-          </div>
-
-          <div className="edu edu4">
-            <h3>2020</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].davidChikvaidze} </span>{" "}
-              {TEXTS[language].salesTech}
-            </p>
-          </div>
-
-          <div className="edu edu5">
-            <h3>2019</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].tatiaTura}</span>{" "}
-              {TEXTS[language].serviceMang}
-            </p>
-          </div>
-
-          <div className="edu edu6">
-            <h3>2016</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].jejelava}</span> {TEXTS[language].timeMang}
-            </p>
-          </div>
-
-          <div className="edu edu7">
-            <h3>2014-2015</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].gpi} </span>
-              {TEXTS[language].salesTech} / {TEXTS[language].salesMang}
-            </p>
-          </div>
-          <div className="edu edu8">
-            <h3>2013</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].uni} </span> {TEXTS[language].hlv}
-            </p>
-          </div>
-          <div className="edu edu9">
-            <h3>2013-2015</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].uni} </span> {TEXTS[language].specMagistr}
-            </p>
-          </div>
-          <div className="edu edu10">
-            <h3>2010-2013</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].uni} </span> {TEXTS[language].specBacal1}
-            </p>
-          </div>
-          <div className="edu edu11">
-            <h3>2009-2013</h3>
-            <p>
-              {" "}
-              <span>{TEXTS[language].uni}</span> {TEXTS[language].specbacal2}
-            </p>
-          </div>
+      <div className="education">
+      <h2>{TEXTS[language].education}</h2>
+      {educationData.map((item, index) => (
+        <div className={`edu edu${index + 1}`} key={index}>
+          <h3>{item.year}</h3>
+          <p>
+            <span>{item.institution}</span> {item.course}
+          </p>
         </div>
-        <div className="experience">
-          <h2> {TEXTS[language].experience}</h2>
-          <div className="job job1">
-            <h3>2015-{TEXTS[language].today}</h3>
-            <p>
-              <span>{TEXTS[language].prime}</span>
-              {TEXTS[language].corp}
-            </p>
+      ))}
+    </div>
+    <div className="experience">
+          <h2>{TEXTS[language].experience}</h2>
+          {experienceData.map((item, index) => (
+            <div className={`job job${index + 1}`} key={index}>
+              <h3>{item.year}</h3>
+              <p>
+                <span>{item.company}</span> {item.position}
+              </p>
+            </div>
+          ))}
           </div>
-          <div className="job job2">
-            <h3>2020-{TEXTS[language].today}</h3>
-            <p>
-              <span>{TEXTS[language].aldagi}</span>
-              {TEXTS[language].agro}
-            </p>
           </div>
-          <div className="job job3">
-            <h3>2020-2023</h3>
-            <p>
-              <span>{TEXTS[language].nvi}</span>
-              {TEXTS[language].agro}
-            </p>
-          </div>
-          <div className="job job4">
-            <h3>2021-2023</h3>
-            <p>
-              <span>{TEXTS[language].liberty}</span>
-              {TEXTS[language].agroCredit}
-            </p>
-          </div>
-          <div className="job job5">
-            <h3>2021-2023</h3>
-            <p>
-              <span>{TEXTS[language].crystal}</span>
-              {TEXTS[language].agroCredit}
-            </p>
-          </div>
-          <div className="job job6">
-            <h3>2016-2020</h3>
-            <p>
-              <span>{TEXTS[language].gpi}</span>
-              {TEXTS[language].agro}
-            </p>
-          </div>
-          <div className="job job7">
-            <h3>2016-2020</h3>
-            <p>
-              <span>{TEXTS[language].finca}</span>
-              {TEXTS[language].agroCredit}
-            </p>
-          </div>
-          <div className="job job8">
-            <h3>2012-2015</h3>
-            <p>
-              <span>{TEXTS[language].gpi}</span>
-              {TEXTS[language].retailSale}
-            </p>
-          </div>
-        </div>
-      </div>
+        
       <div className="certificates">
         <Certificate />
       </div>

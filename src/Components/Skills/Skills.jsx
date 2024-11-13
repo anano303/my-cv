@@ -7,7 +7,9 @@ import {
   FaAngular,
   FaSass,
   FaBootstrap,
+
 } from "react-icons/fa";
+import { SiNextdotjs, SiExpress, SiNestjs } from "react-icons/si";
 import "./Skills.css";
 
 const Skills = () => {
@@ -19,7 +21,10 @@ const Skills = () => {
     { name: "Bootstrap", level: 4 },
     { name: "JavaScript", level: 3 },
     { name: "React", level: 4 },
-    { name: "Angular", level: 2 },
+    { name: "Angular", level: 4 },
+    { name: "Next.js", level: 4 },
+    {name: "Express.js", level:3},
+    {name: "Nest.js", level:3},
 
     // Add more skills as needed
   ];
@@ -57,6 +62,12 @@ const getSkillIcon = (skillName) => {
       return <FaSass />;
     case "Bootstrap":
       return <FaBootstrap />;
+      case "Next.js":
+        return <SiNextdotjs />;
+      case "Express.js":
+        return <SiExpress />;
+      case "Nest.js":
+        return <SiNestjs />;
     default:
       return null;
   }
