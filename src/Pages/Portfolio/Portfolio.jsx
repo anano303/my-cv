@@ -17,6 +17,7 @@ import tbc from "./my projects/tbc.jpg";
 import trainSite from "./my projects/train.jpg";
 import bestSoft from "./my projects/bestSoft.jpg";
 import odedoo from "./my projects/Screenshot_20250119_034617_Chrome.jpg";
+import pixel from "./my projects/Screenshot_20250119_035546_Chrome.jpg";
 
 
 const Portfolio = () => {
@@ -27,6 +28,11 @@ const Portfolio = () => {
       imageUrl: odedoo,
       projectTitle: "Procurement Platform",
       projectLink: "https://odedoo.com/",
+    },
+     {
+      imageUrl: pixel,
+      projectTitle: "Pixel Studio",
+      projectLink: "https://pixelstudio-fawn.vercel.app/",
     },
      {
       imageUrl: trainSite,
