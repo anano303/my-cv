@@ -26,7 +26,7 @@ const Portfolio = () => {
     {
       imageUrl: odedoo,
       projectTitle: "Procurement Platform",
-      projectLink: "https://odedoo.com,
+      projectLink: "https://odedoo.com/",
     },
      {
       imageUrl: trainSite,
