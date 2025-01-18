@@ -1,6 +1,6 @@
 import MyImage from "../../assets/me.png";
 import "./Home.css";
-import cv from "../../assets/cv.pdf";
+import cv from "../../assets/cv Ani Beroshvili 2024.pdf";
 import { TEXTS } from "../../Hooks/Languages";
 import { LanguageContext } from "../../Hooks/LanguageContext";
 import { useContext } from "react";
