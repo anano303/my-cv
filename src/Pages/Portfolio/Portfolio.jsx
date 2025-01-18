@@ -16,12 +16,19 @@ import clipboardImage10 from "./my projects/1.jpg";
 import tbc from "./my projects/tbc.jpg";
 import trainSite from "./my projects/train.jpg";
 import bestSoft from "./my projects/bestSoft.jpg";
+import odedoo from "./my projects/Screenshot_20250119_034617_Chrome.jpg";
+
 
 const Portfolio = () => {
   const { language } = useContext(LanguageContext);
 
   const projects = [
     {
+      imageUrl: odedoo,
+      projectTitle: "Procurement Platform",
+      projectLink: "https://odedoo.com,
+    },
+     {
       imageUrl: trainSite,
       projectTitle: "Train Railway",
       projectLink: "https://train-tickets-nine.vercel.app/",
