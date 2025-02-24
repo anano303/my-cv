@@ -52,7 +52,7 @@ const Portfolio = () => {
     },
     {
       imageUrl: expense,
-      projectTitle: "Expense Management App",
+      projectTitle: "Expense App",
       description:
         "The app is designed for managing and organizing expenses, offering full CRUD operations and an admin panel with authentication. It uses Express.js for the backend and React.js for the frontend.",
       technologies:
@@ -215,18 +215,18 @@ const Portfolio = () => {
               console.log("Clicked project link:", project.projectLink)
             }
           >
+            <img
+              className="projectImage"
+              src={project.imageUrl}
+              alt={project.projectTitle}
+            />
             <div className="projectDiv">
-              <img
-                className="projectImage"
-                src={project.imageUrl}
-                alt={project.projectTitle}
-              />
               <div className="textPortfolio">
                 <h2>{project.projectTitle}</h2>
-                <br />
+                {/* <br />
                 <p>{project.description}</p>
                 <br />
-                <p>{project.technologies}</p>
+                <p>{project.technologies}</p> */}
               </div>
             </div>
             <div className="buttons">
