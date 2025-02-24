@@ -223,10 +223,6 @@ const Portfolio = () => {
             <div className="projectDiv">
               <div className="textPortfolio">
                 <h2>{project.projectTitle}</h2>
-                {/* <br />
-                <p>{project.description}</p>
-                <br />
-                <p>{project.technologies}</p> */}
               </div>
             </div>
             <div className="buttons">
@@ -245,6 +241,10 @@ const Portfolio = () => {
                 Live
               </a>
             </div>
+            <br />
+            <p>{project.description}</p>
+            <br />
+            <p>{project.technologies}</p>
           </a>
         ))}
       </div>
