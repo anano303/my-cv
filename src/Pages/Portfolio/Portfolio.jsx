@@ -20,11 +20,22 @@ import odedoo from "./my projects/Screenshot_20250119_034617_Chrome.jpg";
 import pixel from "./my projects/Screenshot_20250119_035546_Chrome.jpg";
 import expense from "./my projects/expense.jpeg";
 import fishHunt from "./my projects/fishhunt.jpg";
+import SoulArt from "./my projects/soulart.jpg";
 
 const Portfolio = () => {
   const { language } = useContext(LanguageContext);
 
   const projects = [
+    
+    {
+      imageUrl: SoulArt,
+      projectTitle: "SoulArt (Work In Progress)",
+      description: "E-commerce Platform for painters and users, with adminPanel",
+      technologies:
+        "Next.js, Nest.js, mongoDB,RestApi, Swagger,Docker, Cloudinary, AWS, BogPay, AIChat, Socket,nodemailer,Auth/Registration,  GoogleAuth, stripe, paypal",
+      githubLink: "https://github.com/anano303/soul-art",
+      projectLink: "https://soul-art.vercel.app/",
+    },
     {
       imageUrl: fishHunt,
       projectTitle: "FishHunt (Work In Progress)",
