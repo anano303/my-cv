@@ -4,9 +4,9 @@ import cv from "../../assets/cv Ani Beroshvili 2024.pdf";
 import { TEXTS } from "../../Hooks/Languages";
 import { LanguageContext } from "../../Hooks/LanguageContext";
 import { useContext } from "react";
-import img1 from "../../assets/evolve.png";
-import img2 from "../../assets/create.png";
-import img3 from "../../assets/innovate.png";
+// import img1 from "../../assets/evolve.png";
+// import img2 from "../../assets/create.png";
+// import img3 from "../../assets/innovate.png";
 import sect2Image from "../../assets/Group 6.png";
 import { Link } from "react-router-dom";
 const Home = () => {
