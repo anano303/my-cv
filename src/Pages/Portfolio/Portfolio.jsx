@@ -67,7 +67,7 @@ const Portfolio = () => {
       description:
         "The app is designed for managing and organizing expenses, offering full CRUD operations and an admin panel with authentication. It uses Express.js for the backend and React.js for the frontend.",
       technologies:
-        "Next.js, Axios, Node.js,Express.js,jsonwebtoken (JWT),dotenv,  MongoDB",
+        "Next.js, Axios, Node.js,Express.js, jsonwebtoken (JWT), dotenv,  MongoDB",
       githubLink: "https://github.com/anano303/expense-app?tab=readme-ov-file",
       projectLink: "https://github.com/anano303/expense-app?tab=readme-ov-file",
     },
