@@ -9,6 +9,8 @@ import arrowHome from "./icons8-down-94.png";
 import { LanguageContext } from "../src/Hooks/LanguageContext";
 import { ThemeContext } from "../src/Hooks/ThemeContext";
 import "./App.css";
+import { smoothScrollTo } from "./utils/scrollUtils";
+import { setupHeaderScroll } from "./utils/headerScroll";
 
 function App() {
   const [language, setLanguage] = useState("ge");
@@ -24,7 +26,11 @@ function App() {
     if (appEl) {
       appEl.className = theme;
     }
+    
+    // Set up sticky header scroll behavior
+    setupHeaderScroll();
   }, [theme]);
+  
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
@@ -33,17 +39,32 @@ function App() {
     setShowAllPages((prev) => !prev);
   };
 
+  // Handle scroll to section when all pages are shown
+  const handleScrollToSection = (sectionId) => {
+    if (showAllPages) {
+      smoothScrollTo(sectionId);
+    }
+  };
+
   return (
     <div className="App" id="app">
       <LanguageContext.Provider value={{ language, setLanguage }}>
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <Router>
             {showAllPages ? (
-              <Layout>
-                <Home />
-                <About />
-                <Portfolio />
-                <Contact />
+              <Layout onNavigate={handleScrollToSection}>
+                <div id="home-section" className="section">
+                  <Home />
+                </div>
+                <div id="about-section" className="section">
+                  <About />
+                </div>
+                <div id="portfolio-section" className="section">
+                  <Portfolio />
+                </div>
+                <div id="contact-section" className="section">
+                  <Contact />
+                </div>
               </Layout>
             ) : (
               <Routes>
@@ -51,7 +72,9 @@ function App() {
                   path="/"
                   element={
                     <Layout>
-                      <Home />
+                      <div id="home-section">
+                        <Home />
+                      </div>
                       <button
                         className="homeArrow"
                         onClick={toggleShowAllPages}
@@ -69,7 +92,9 @@ function App() {
                   path="/contact"
                   element={
                     <Layout>
-                      <Contact />
+                      <div id="contact-section">
+                        <Contact />
+                      </div>
                     </Layout>
                   }
                 />
@@ -77,16 +102,19 @@ function App() {
                   path="/about"
                   element={
                     <Layout>
-                      <About />
+                      <div id="about-section">
+                        <About />
+                      </div>
                     </Layout>
                   }
                 />
-
                 <Route
                   path="/portfolio"
                   element={
                     <Layout>
-                      <Portfolio />
+                      <div id="portfolio-section">
+                        <Portfolio />
+                      </div>
                     </Layout>
                   }
                 />

@@ -12,7 +12,7 @@ import moon from "../Toggle/darkToggle.png";
 import sun from "../Toggle/lightToggle.png";
 import ToggleSwitch from "../Toggle/Toggle";
 
-const Header = () => {
+const Header = ({ onNavigate }) => {
   const { language, setLanguage } = useContext(LanguageContext);
   const { theme, toggleTheme } = useContext(ThemeContext); // Access ThemeContext
   const [isChecked, setIsChecked] = useState(theme === "dark");
@@ -42,7 +42,7 @@ const Header = () => {
             className="logo"
           />
         </Link>{" "}
-        <Navbar />
+        <Navbar onNavigate={onNavigate} />
         <div className="icons">
           <div className="toggle">
             <ToggleSwitch

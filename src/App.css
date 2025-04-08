@@ -20,3 +20,77 @@
     transform: translateY(-0.625rem);
   }
 }
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section styling for smooth scrolling */
+.section {
+  scroll-margin-top: 70px; /* Adjust for fixed header height plus some padding */
+  min-height: 100vh;
+  position: relative;
+  padding-top: 20px; /* Add padding to prevent content from being hidden by header */
+}
+
+/* Fix for Safari and older browsers */
+@supports not (scroll-behavior: smooth) {
+  html, body {
+    scroll-behavior: auto;
+  }
+}
+
+/* Ensure proper content positioning for fixed header */
+main {
+  padding-top: 20px;
+}
+
+/* Custom animation for scrolling */
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to sections when they come into view */
+.section:target {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Adjust scroll behavior based on device size */
+@media (max-width: 820px) {
+  .section {
+    scroll-margin-top: 40px; /* Smaller offset for mobile */
+  }
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c2fdd4 #165b66;
+}
+
+/* For Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(22, 91, 102, 0.1);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c2fdd4;
+  border-radius: 10px;
+  border: 2px solid rgba(22, 91, 102, 0.1);
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background-color: #9eeeb9;
+}

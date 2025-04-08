@@ -5,17 +5,61 @@
 .menu {
   position: absolute;
   left: 78%;
-  top: 0;
+  top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 }
 
 .menu img {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s ease;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
   cursor: pointer;
+  opacity: 0.8;
 }
 .menu:hover img {
-  transform: scale(1.1); /* Increase size on hover */
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Hamburger menu styling - more professional look */
+.hamburger-icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #486e74;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.dark .hamburger-icon span {
+  background-color: #c2fdd4;
+}
+
+/* X icon when menu is open */
+.hamburger-icon.open span:nth-child(1) {
+  transform: translateY(-34px) rotate(45deg);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  transform: translateY(-40px) rotate(-45deg);
 }
 
 .links {

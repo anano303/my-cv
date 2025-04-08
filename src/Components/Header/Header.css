@@ -2,15 +2,25 @@
   background: #c2fdd4;
   box-shadow: 0px 1px 12px 20px #c2fdd4;
   display: flex;
-  position: relative;
+  position: fixed; /* Change from relative to fixed */
+  top: 0;
+  left: 0;
+  right: 0;
   justify-content: space-between;
   height: 40px;
+  z-index: 1000; /* Ensure header is always on top */
+  transition: transform 0.3s ease; /* Add smooth transition for scroll hiding/showing */
 }
 
 .dark .header {
   background-color: black;
   box-shadow: 0 1px 12px 20px black;
 }
+
+body {
+  padding-top: 50px; /* Slightly more than header height */
+}
+
 .mobileFlex {
   display: flex;
   align-items: center;
