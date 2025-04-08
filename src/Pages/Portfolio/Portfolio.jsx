@@ -32,7 +32,7 @@ const Portfolio = () => {
       projectTitle: "SoulArt (Work In Progress)",
       description: "E-commerce Platform for painters and users, with adminPanel",
       technologies:
-        "Next.js, Nest.js, mongoDB,RestApi, Swagger,Docker, Cloudinary, AWS, BogPay, AIChat, Socket,nodemailer,Auth/ Registration,  GoogleAuth, stripe, paypal",
+        "Next.js, Nest.js, mongoDB, RestApi, Swagger, Docker, Cloudinary, AWS, BogPay, AIChat, Socket, nodemailer, Auth/ Registration,  GoogleAuth, stripe, paypal",
       githubLink: "https://github.com/anano303/soul-art",
       projectLink: "https://soulart.ge/",
     },
@@ -41,7 +41,7 @@ const Portfolio = () => {
       projectTitle: "FishHunt (Work In Progress)",
       description: "E-commerce Platform for sellers and users, with adminPanel",
       technologies:
-        "Next.js, Nest.js, mongoDB,RestApi, Swagger,Docker, Cloudinary, AWS, BogPay, AIChat, Socket,nodemailer,Auth/ Registration,  GoogleAuth, stripe, paypal",
+        "Next.js, Nest.js, mongoDB,RestApi, Swagger, Docker, Cloudinary, AWS, BogPay, AIChat, Socket, nodemailer, Auth/ Registration,  GoogleAuth, stripe, paypal",
       githubLink: "https://github.com/anano303/FishHunt1",
       projectLink: "https://fishhunt.ge",
     },
@@ -57,7 +57,7 @@ const Portfolio = () => {
       imageUrl: pixel,
       projectTitle: "Pixel Studio",
       description: "Creative photo studio website.",
-      technologies: "Next.js, CSS, Cloudinary,Formspree, Firebase",
+      technologies: "Next.js, CSS, Cloudinary, Formspree, Firebase",
       githubLink: "https://github.com/anano303/pixelstudio",
       projectLink: "https://pixelstudio.ge",
     },
@@ -67,7 +67,7 @@ const Portfolio = () => {
       description:
         "The app is designed for managing and organizing expenses, offering full CRUD operations and an admin panel with authentication. It uses Express.js for the backend and React.js for the frontend.",
       technologies:
-        "Next.js, Axios, Node.js,Express.js, jsonwebtoken (JWT), dotenv,  MongoDB",
+        "Next.js, Axios, Node.js, Express.js, jsonwebtoken (JWT), dotenv,  MongoDB",
       githubLink: "https://github.com/anano303/expense-app?tab=readme-ov-file",
       projectLink: "https://github.com/anano303/expense-app?tab=readme-ov-file",
     },
