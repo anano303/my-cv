@@ -32,7 +32,7 @@ const Portfolio = () => {
       projectTitle: "SoulArt (Work In Progress)",
       description: "E-commerce Platform for painters and users, with adminPanel",
       technologies:
-        "Next.js, Nest.js, mongoDB,RestApi, Swagger,Docker, Cloudinary, AWS, BogPay, AIChat, Socket,nodemailer,Auth/Registration,  GoogleAuth, stripe, paypal",
+        "Next.js, Nest.js, mongoDB,RestApi, Swagger,Docker, Cloudinary, AWS, BogPay, AIChat, Socket,nodemailer,Auth/ Registration,  GoogleAuth, stripe, paypal",
       githubLink: "https://github.com/anano303/soul-art",
       projectLink: "https://soulart.ge/",
     },
@@ -41,7 +41,7 @@ const Portfolio = () => {
       projectTitle: "FishHunt (Work In Progress)",
       description: "E-commerce Platform for sellers and users, with adminPanel",
       technologies:
-        "Next.js, Nest.js, mongoDB,RestApi, Swagger,Docker, Cloudinary, AWS, BogPay, AIChat, Socket,nodemailer,Auth/Registration,  GoogleAuth, stripe, paypal",
+        "Next.js, Nest.js, mongoDB,RestApi, Swagger,Docker, Cloudinary, AWS, BogPay, AIChat, Socket,nodemailer,Auth/ Registration,  GoogleAuth, stripe, paypal",
       githubLink: "https://github.com/anano303/FishHunt1",
       projectLink: "https://fishhunt.ge",
     },

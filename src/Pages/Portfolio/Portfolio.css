@@ -72,9 +72,8 @@
   text-align: end;
   opacity: 0.9;
   font-size: 2vw;
-
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  transition: color 0.3s ease; /* Transition text color */
+  transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Added transitions */
 }
 
 .project::before {
@@ -103,9 +102,10 @@
   background-color: transparent;
 }
 
+/* Hide title when showing details */
 .project:hover .textPortfolio {
-  color: #c2fdd4;
-  background-color: #042d30; /* Change text color on hover */
+  opacity: 0; /* Hide the title completely on hover */
+  transform: translateY(-20px); /* Optional: animate it moving up while fading out */
 }
 
 .project .buttons {
@@ -173,26 +173,27 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  z-index: 2;
+  z-index: 4; /* Increased z-index to be higher than the title */
 }
 
 .project:hover .project-details {
   height: 70%;
   overflow-y: auto;
   padding: 10px 0;
+  padding-bottom: 70px; /* Add extra padding at the bottom to prevent overlap with buttons */
 }
 
 .project-description, .project-technologies {
-  padding: 5px 10px;
-  margin-bottom: 10px;
+  padding: 5px 15px; /* Increased horizontal padding */
+  margin-bottom: 15px; /* Increased bottom margin */
 }
 
 .project-details h3 {
-  margin: 5px 0;
+  margin: 8px 0; /* Increased vertical margin */
   font-size: 1rem;
   color: #c2fdd4;
   border-bottom: 1px solid #c2fdd4;
-  padding-bottom: 3px;
+  padding-bottom: 5px; /* Increased bottom padding */
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -200,9 +201,11 @@
 .project-details p {
   color: #c2fdd4;
   font-size: 0.8rem;
-  line-height: 1.4;
-  margin-top: 5px;
+  line-height: 1.5; /* Increased line height */
+  margin-top: 8px; /* Increased top margin */
+  margin-bottom: 12px; /* Added bottom margin */
   text-transform: none;
+  padding: 0 5px; /* Added padding */
 }
 
 /* Custom scrollbar for project details */
@@ -229,10 +232,17 @@
   
   .project-details h3 {
     font-size: 1.1rem;
+    margin: 10px 0; /* Increased margin */
   }
   
   .project-details p {
     font-size: 0.9rem;
+    line-height: 1.6; /* Increased line height */
+    padding: 0 8px; /* Increased padding */
+  }
+  
+  .project:hover .project-details {
+    padding-bottom: 80px; /* Larger padding for medium screens */
   }
 }
 
@@ -246,11 +256,17 @@
   
   .project-details h3 {
     font-size: 1.2rem;
+    margin: 12px 0; /* Increased margin */
   }
   
   .project-details p {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.7; /* Increased line height */
+    padding: 0 10px; /* Increased padding */
+  }
+  
+  .project:hover .project-details {
+    padding-bottom: 100px; /* Even larger padding for big screens */
   }
   
   .project .buttons a {
