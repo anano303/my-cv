@@ -34,7 +34,7 @@ const Portfolio = () => {
       technologies:
         "Next.js, Nest.js, mongoDB,RestApi, Swagger,Docker, Cloudinary, AWS, BogPay, AIChat, Socket,nodemailer,Auth/Registration,  GoogleAuth, stripe, paypal",
       githubLink: "https://github.com/anano303/soul-art",
-      projectLink: "https://soul-art.vercel.app/",
+      projectLink: "https://soulart.ge/",
     },
     {
       imageUrl: fishHunt,
@@ -43,7 +43,7 @@ const Portfolio = () => {
       technologies:
         "Next.js, Nest.js, mongoDB,RestApi, Swagger,Docker, Cloudinary, AWS, BogPay, AIChat, Socket,nodemailer,Auth/Registration,  GoogleAuth, stripe, paypal",
       githubLink: "https://github.com/anano303/FishHunt1",
-      projectLink: "https://fishhunt.vercel.app",
+      projectLink: "https://fishhunt.ge",
     },
     {
       imageUrl: odedoo,
