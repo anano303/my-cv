@@ -21,20 +21,31 @@ import pixel from "./my projects/Screenshot_20250119_035546_Chrome.jpg";
 import expense from "./my projects/expense.jpeg";
 import fishHunt from "./my projects/fishhunt.jpg";
 import SoulArt from "./my projects/soulart.jpg";
+import Ezobana from "./my projects/ezobana.png";
 
 const Portfolio = () => {
   const { language } = useContext(LanguageContext);
 
   const projects = [
-    
     {
       imageUrl: SoulArt,
       projectTitle: "SoulArt (Work In Progress)",
-      description: "E-commerce Platform for painters and users, with adminPanel",
+      description:
+        "E-commerce Platform for painters and users, with adminPanel",
       technologies:
         "Next.js, Nest.js, mongoDB, RestApi, Swagger, Docker, Cloudinary, AWS, BogPay, AIChat, Socket, nodemailer, Auth/ Registration,  GoogleAuth, stripe, paypal",
       githubLink: "https://github.com/anano303/soul-art",
       projectLink: "https://soulart.ge/",
+    },
+    {
+      imageUrl: Ezobana,
+      projectTitle: "Birthday Celebration Center",
+      description:
+        "A children's entertainment center platform for booking birthday parties and events, featuring online reservations and party package selection",
+      technologies:
+        "React, CSS, JavaScript, Formspree, Firebase, Responsive Design",
+      githubLink: "https://github.com/anano303/ezobana",
+      projectLink: "https://ezobana.vercel.app/",
     },
     {
       imageUrl: fishHunt,
@@ -252,7 +263,7 @@ const Portfolio = () => {
                 Live
               </a>
             </div>
-            
+
             <div className="project-details">
               <div className="project-description">
                 <h3>Description</h3>
