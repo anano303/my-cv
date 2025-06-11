@@ -22,11 +22,22 @@ import expense from "./my projects/expense.jpeg";
 import fishHunt from "./my projects/fishhunt.jpg";
 import SoulArt from "./my projects/soulart.jpg";
 import Ezobana from "./my projects/ezobana.png";
+import Silhoutte from "./my projects/siluete.png";
 
 const Portfolio = () => {
   const { language } = useContext(LanguageContext);
 
   const projects = [
+     {
+      imageUrl: Silhoutte,
+      projectTitle: "Silhoutte",
+      description:
+        "Landing page for handmade items with an elegant design ",
+      technologies:
+        "Next.js,TypeScript,Responsive Design, Animations,Formspree, Firebase",
+      githubLink: "https://github.com/anano303/silhoutte",
+      projectLink: "https://silhoutte.vercel.app/",
+    },
     {
       imageUrl: SoulArt,
       projectTitle: "SoulArt (Work In Progress)",
