@@ -1,58 +1,64 @@
 .skills {
-  display: flex;
-  flex-direction: column;
-  padding-left: 15vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .skill {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
-  margin-bottom: 30px;
-  border-bottom: 1px dotted #4169e1;
-  border-radius: 40% 0px;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  transition: all var(--transition-normal);
+}
+
+.skill:hover {
+  border-color: var(--border-color);
+  transform: translateX(4px);
+  box-shadow: var(--glow-primary);
 }
 
 .skill .iconSkills {
-  margin-right: 10px;
   display: flex;
   align-items: center;
-  gap: 5vw;
+  gap: 12px;
+  color: var(--accent-primary);
+  font-size: 1.3rem;
 }
 
 .name {
-  font-weight: bold;
-  margin-right: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
 }
 
-.level-indicator {
-  display: flex;
-}
-
-.star {
-  color: pink;
-  font-size: 1.5rem;
-  margin-right: 5px;
-}
+.level-indicator { display: flex; align-items: center; }
 
 .level-bar {
   width: 100px;
-  height: 10px;
-  background-color: lightgray;
-  border-radius: 5px;
+  height: 4px;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .level-fill {
   height: 100%;
-  background-color: pink;
-  border-radius: 5px;
+  background: var(--accent-gradient);
+  border-radius: 4px;
+  transition: width 1s ease;
 }
 
 @media screen and (min-width: 620px) {
-  .skills {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8vw;
-  }
+  .skills { grid-template-columns: 1fr 1fr; }
+}
+
+@media screen and (min-width: 1000px) {
+  .skills { grid-template-columns: 1fr 1fr 1fr; }
 }

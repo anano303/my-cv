@@ -79,8 +79,7 @@ const Certificates = () => {
   };
 
   return (
-    <div className="certificates">
-      <h1>{TEXTS[language].certificates}</h1>
+    <div className="certificates-wrapper">
       <div className="certificates-box">
         {divs.map((div) => (
           <div

@@ -53,6 +53,10 @@ export const TEXTS = {
     fullStack:"Full-Stack დეველოპერი",
     bestSoft:"კომპანია ბესთსოფთი",
     frontEnd:"Front-End დეველოპერი",
+    soulart:"SoulArt",
+    soulartRole:"Full-Stack დეველოპერი — გადახდები, ჰოსტინგი, რეფერალური სისტემები, ანალიტიკა, აუქციონები და საიტის სრული ფუნქციონალი",
+    shopit:"ShopIt",
+    shopitRole:"Full-Stack დეველოპერი — ექომერს მარკეტპლეისი (Shopify-ის მსგავსი), გადახდები, ჰოსტინგი, ონლაინ მაღაზიების მართვა და სრული ფუნქციონალი",
   },
 
   en: {
@@ -109,5 +113,9 @@ export const TEXTS = {
     fullStack:"Full-Stack Developer",
     bestSoft:"BESTSOFT COMPANY",
     frontEnd:"Front End Developer",
+    soulart:"SoulArt",
+    soulartRole:"Full-Stack Developer — Payments, Hosting, Referral Systems, Analytics, Auctions & Full Site Functionality",
+    shopit:"ShopIt",
+    shopitRole:"Full-Stack Developer — E-commerce Marketplace Platform (Shopify-like), Payments, Hosting, Online Store Management & Full Functionality",
   },
 };

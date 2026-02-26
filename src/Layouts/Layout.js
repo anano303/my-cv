@@ -3,14 +3,10 @@ import Footer from "../Components/Footer/Footer.jsx";
 
 export default function Layout({ children, onNavigate }) {
   return (
-    <div>
+    <div className="layout">
       <Header onNavigate={onNavigate} />
-      <main>
-        <div>{children}</div>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+      <main>{children}</main>
+      <Footer />
     </div>
   );
 }

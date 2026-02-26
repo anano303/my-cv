@@ -1,77 +1,141 @@
 .contact {
-  padding-top: 2%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  text-align: center;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 8% 60px;
 }
-.contact h1 {
-  color: #007bff;
-  text-shadow: 0px 0px 10px #007bff;
-  margin-top: 80px;
+
+.section1 {
+  width: 100%;
+  max-width: 600px;
+}
+
+.section1 h1 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+
+.section1 h1::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-gradient);
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.section1 > p {
+  text-align: center;
+  color: var(--accent-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all var(--transition-normal);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+  padding: 16px 40px;
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.3);
+}
+
+.contact-form button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.4);
 }
 
 .socIcons {
-  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.socIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+}
+
+.socIcons a:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.2);
 }
 
 .socIcons img {
-  width: 25%;
-  cursor: pointer;
-}
-.socIcons img:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
-}
-.contact-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #f5f5f5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(0.7);
+  transition: filter var(--transition-fast);
 }
 
-.contact-form .form-group {
-  margin-bottom: 15px;
+.socIcons a:hover img {
+  filter: brightness(0) invert(1);
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 50%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+.socIcons a svg {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
 }
 
-.contact-form textarea {
-  height: 120px;
-}
-
-.contact-form button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #0056b3;
-}
-
-@media screen and (min-width: 800px) {
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    width: 30%;
-  }
-  .socIcons img {
-    width: 12%;
-  }
+.socIcons a:hover svg {
+  color: var(--accent-primary);
 }

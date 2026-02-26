@@ -15,7 +15,7 @@ import { setupHeaderScroll } from "./utils/headerScroll";
 function App() {
   const [language, setLanguage] = useState("ge");
   const [showAllPages, setShowAllPages] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     document.body.className = language;
