@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageContext } from "../../../Hooks/LanguageContext.js";
 import { useContext, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { TEXTS } from "../../../Hooks/Languages.js";
 import geo from "../../../assets/Georgia.png";
 import eng from "../../../assets/USA.png";
@@ -66,7 +67,8 @@ const Navbar = ({ onNavigate }) => {
           <span></span>
         </div>
       </div>
-      <div className={`links ${isMenuOpen ? "open" : ""}`}>
+      {/* Desktop links rendered normally inside header */}
+      <div className="links desktop-links">
         <ul className="ul">
           <div className="desktop1">
             <li>
@@ -92,19 +94,47 @@ const Navbar = ({ onNavigate }) => {
               </Link>
             </li>
           </div>
-          <div className="mobileIcons">
-            <div className="toggle">
-              <ToggleSwitch checked={isChecked} onChange={handleChange} />
-            </div>
-            <img
-              className="lang"
-              src={language === "ge" ? eng : geo}
-              alt="lang"
-              onClick={handleLangClick}
-            />
-          </div>
         </ul>
       </div>
+      {/* Mobile overlay rendered via portal to escape header stacking context */}
+      {isMenuOpen && createPortal(
+        <div className="mobile-nav-overlay" onClick={(e) => { if (e.target === e.currentTarget) closeMenu(); }}>
+          <ul>
+            <li>
+              <Link to="/" onClick={(e) => { handleNavigation(e, TEXTS[language].home); closeMenu(); }}>
+                {TEXTS[language].home}
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={(e) => { handleNavigation(e, TEXTS[language].about); closeMenu(); }}>
+                {TEXTS[language].about}
+              </Link>
+            </li>
+            <li>
+              <Link to="/portfolio" onClick={(e) => { handleNavigation(e, TEXTS[language].portfolio); closeMenu(); }}>
+                {TEXTS[language].portfolio}
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={(e) => { handleNavigation(e, TEXTS[language].contact); closeMenu(); }}>
+                {TEXTS[language].contact}
+              </Link>
+            </li>
+            <div className="mobileIcons">
+              <div className="toggle">
+                <ToggleSwitch checked={isChecked} onChange={handleChange} />
+              </div>
+              <img
+                className="lang"
+                src={language === "ge" ? eng : geo}
+                alt="lang"
+                onClick={handleLangClick}
+              />
+            </div>
+          </ul>
+        </div>,
+        document.body
+      )}
     </div>
   );
 };

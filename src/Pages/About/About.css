@@ -169,13 +169,98 @@
 /* ─── Collapsible Content ─── */
 .collapsible-inner {
   padding: 0 24px 24px;
-  animation: slideDown 0.3s ease-out;
+  animation: collapsibleSlideDown 0.3s ease-out;
 }
 
-@keyframes slideDown {
+@keyframes collapsibleSlideDown {
   from {
     opacity: 0;
     transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Experience Sub-categories ─── */
+.exp-subcategories {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exp-sub {
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  background: rgba(108, 99, 255, 0.03);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.exp-sub:hover {
+  border-color: rgba(108, 99, 255, 0.2);
+}
+
+.exp-sub[open] {
+  border-color: rgba(108, 99, 255, 0.25);
+  box-shadow: 0 2px 12px rgba(108, 99, 255, 0.06);
+}
+
+.exp-sub-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background var(--transition-fast);
+}
+
+.exp-sub-header::-webkit-details-marker {
+  display: none;
+}
+
+.exp-sub-header:hover {
+  background: rgba(108, 99, 255, 0.05);
+}
+
+.exp-sub-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.exp-sub-header h3 {
+  flex: 1;
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}
+
+.exp-sub-chevron {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.exp-sub[open] .exp-sub-chevron {
+  transform: rotate(180deg);
+}
+
+.exp-sub-content {
+  padding: 0 18px 16px;
+  animation: subSlideDown 0.25s ease-out;
+}
+
+@keyframes subSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
   }
   to {
     opacity: 1;

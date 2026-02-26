@@ -57,6 +57,9 @@ export const TEXTS = {
     soulartRole:"Full-Stack დეველოპერი — გადახდები, ჰოსტინგი, რეფერალური სისტემები, ანალიტიკა, აუქციონები და საიტის სრული ფუნქციონალი",
     shopit:"ShopIt",
     shopitRole:"Full-Stack დეველოპერი — ექომერს მარკეტპლეისი (Shopify-ის მსგავსი), გადახდები, ჰოსტინგი, ონლაინ მაღაზიების მართვა და სრული ფუნქციონალი",
+    soulartSalesRole:"CEO / დირექტორი — მარკეტინგი, გაყიდვები, ბიზნეს სტრატეგია, გუნდის მართვა და კომპანიის სრული ოპერაციული ხელმძღვანელობა",
+    expTech:"კომპ. მეცნიერებები და პროგრამირება",
+    expSales:"გაყიდვები და ბიზნესი",
   },
 
   en: {
@@ -117,5 +120,8 @@ export const TEXTS = {
     soulartRole:"Full-Stack Developer — Payments, Hosting, Referral Systems, Analytics, Auctions & Full Site Functionality",
     shopit:"ShopIt",
     shopitRole:"Full-Stack Developer — E-commerce Marketplace Platform (Shopify-like), Payments, Hosting, Online Store Management & Full Functionality",
+    soulartSalesRole:"CEO / Director — Marketing, Sales, Business Strategy, Team Management & Full Company Operations",
+    expTech:"Computer Science & Programming",
+    expSales:"Sales & Business",
   },
 };
