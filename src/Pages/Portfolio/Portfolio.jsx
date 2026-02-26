@@ -9,10 +9,6 @@ import clipboardImage3 from "./my projects/7.jpg";
 import clipboardImage4 from "./my projects/2.jpg";
 import clipboardImage5 from "./my projects/3.jpg";
 import clipboardImage6 from "./my projects/4.jpg";
-import clipboardImage7 from "./my projects/5.jpg";
-import clipboardImage8 from "./my projects/6.jpg";
-import clipboardImage9 from "./my projects/bagis page.png";
-import clipboardImage10 from "./my projects/1.jpg";
 import tbc from "./my projects/tbc.jpg";
 import trainSite from "./my projects/train.jpg";
 import bestSoft from "./my projects/bestSoft.jpg";
@@ -26,6 +22,7 @@ import Silhoutte from "./my projects/siluete.png";
 import myHunter from "./my projects/myHunter.png";
 import prime1 from "./my projects/prime1.png";
 import prime2 from "./my projects/prime2.png";
+import shopIt from "./my projects/shopit.png";
 
 const Portfolio = () => {
   const { language } = useContext(LanguageContext);
@@ -80,6 +77,16 @@ const Portfolio = () => {
         "Next.js, Nest.js, mongoDB, RestApi, Swagger, Docker, Cloudinary, AWS, BogPay, AIChat, Socket, nodemailer, Auth/ Registration,  GoogleAuth, stripe, paypal",
       githubLink: "https://github.com/anano303/soul-art",
       projectLink: "https://soulart.ge/",
+    },
+    {
+      imageUrl: shopIt,
+      projectTitle: "ShopIt — E-commerce Marketplace",
+      description:
+        "E-commerce marketplace platform (Shopify-like) enabling users to create and manage their own online stores. Features include product management, payment integration, hosting, store customization, and full operational functionality.",
+      technologies:
+        "Next.js, Nest.js, MongoDB, TypeScript, REST API, Swagger, Docker, Cloudinary, AWS, BogPay, Socket, Nodemailer, Auth/Registration, GoogleAuth, Stripe, PayPal, Responsive Design",
+      githubLink: "https://github.com/anano303/shopIt",
+      projectLink: "https://shopit.ge/",
     },
     {
       imageUrl: Ezobana,
@@ -206,26 +213,6 @@ const Portfolio = () => {
     },
 
     {
-      imageUrl: clipboardImage8,
-      projectTitle: "Color Game",
-      description:
-        "An engaging color guessing game that challenges users to identify the correct color code, built with vanilla JavaScript.",
-      technologies: "HTML, CSS, JavaScript",
-      githubLink: "https://github.com/anano303/Game-color",
-      projectLink: "https://anano303.github.io/Game-color/",
-    },
-
-    {
-      imageUrl: clipboardImage10,
-      projectTitle: "Tip Calculator",
-      description:
-        "A tip calculator app that helps users calculate the tip based on the bill amount and selected tip percentage.",
-      technologies: "HTML, CSS, JavaScript",
-      githubLink: "https://github.com/anano303/tip-calculator-app",
-      projectLink: "https://anano303.github.io/tip-calculator-app/",
-    },
-
-    {
       imageUrl: clipboardImage3,
       projectTitle: "Online Shop",
       description:
@@ -245,25 +232,7 @@ const Portfolio = () => {
       projectLink: "https://anano303.github.io/skilled-elearning-landing-page/",
     },
 
-    {
-      imageUrl: clipboardImage7,
-      projectTitle: "Calculator",
-      description:
-        "A simple and functional calculator app built using vanilla JavaScript for educational purposes.",
-      technologies: "HTML, CSS, JavaScript",
-      githubLink: "https://github.com/anano303/calculator-app-main",
-      projectLink: "https://anano303.github.io/calculator-app-main/",
-    },
 
-    {
-      imageUrl: clipboardImage9,
-      projectTitle: "Kinder Garden",
-      description:
-        "A playful and colorful page designed for a kinder garden, featuring dynamic elements and smooth animations.",
-      technologies: "React, CSS, JavaScript",
-      githubLink: "https://github.com/anano303/slider-react",
-      projectLink: "https://slider-react-nine.vercel.app/",
-    },
   ];
 
   return (
