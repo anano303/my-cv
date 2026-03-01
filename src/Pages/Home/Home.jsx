@@ -37,7 +37,7 @@ const Home = () => {
         <div className="text2">
           <span>Let's Build Something Amazing.</span>
           <button className="homeButton">
-            <Link to="/contact">{TEXTS[language].contactMe}</Link>
+            <Link to={`/${language}/contact`}>{TEXTS[language].contactMe}</Link>
           </button>
         </div>
       </div>

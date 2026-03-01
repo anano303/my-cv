@@ -27,17 +27,17 @@ const Header = ({ onNavigate }) => {
   return (
     <div className="header">
       <div className="mobileFlex">
-        <Link to="/" className="logo">
+        <Link to={`/${language}`} className="logo">
           <img alt="logo" src={logo} className="logo" />
         </Link>
         <Navbar onNavigate={onNavigate} />
         <div className="icons">
-          <div className="toggle">
+          {/* <div className="toggle">
             <ToggleSwitch
               checked={isChecked}
               onChange={handleChange}
             />
-          </div>
+          </div> */}
           <img
             className="lang"
             src={language === "ge" ? eng : geo}

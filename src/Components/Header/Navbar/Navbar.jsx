@@ -72,24 +72,24 @@ const Navbar = ({ onNavigate }) => {
         <ul className="ul">
           <div className="desktop1">
             <li>
-              <Link to="/" onClick={(e) => handleNavigation(e, TEXTS[language].home)}>
+              <Link to={`/${language}`} onClick={(e) => handleNavigation(e, TEXTS[language].home)}>
                 {TEXTS[language].home}
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={(e) => handleNavigation(e, TEXTS[language].about)}>
+              <Link to={`/${language}/about`} onClick={(e) => handleNavigation(e, TEXTS[language].about)}>
                 {TEXTS[language].about}
               </Link>
             </li>
           </div>
           <div className="desktop2">
             <li className="portfolio">
-              <Link to="/portfolio" onClick={(e) => handleNavigation(e, TEXTS[language].portfolio)}>
+              <Link to={`/${language}/portfolio`} onClick={(e) => handleNavigation(e, TEXTS[language].portfolio)}>
                 {TEXTS[language].portfolio}
               </Link>
             </li>
             <li>
-              <Link to="/contact" onClick={(e) => handleNavigation(e, TEXTS[language].contact)}>
+              <Link to={`/${language}/contact`} onClick={(e) => handleNavigation(e, TEXTS[language].contact)}>
                 {TEXTS[language].contact}
               </Link>
             </li>
@@ -101,29 +101,29 @@ const Navbar = ({ onNavigate }) => {
         <div className="mobile-nav-overlay" onClick={(e) => { if (e.target === e.currentTarget) closeMenu(); }}>
           <ul>
             <li>
-              <Link to="/" onClick={(e) => { handleNavigation(e, TEXTS[language].home); closeMenu(); }}>
+              <Link to={`/${language}`} onClick={(e) => { handleNavigation(e, TEXTS[language].home); closeMenu(); }}>
                 {TEXTS[language].home}
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={(e) => { handleNavigation(e, TEXTS[language].about); closeMenu(); }}>
+              <Link to={`/${language}/about`} onClick={(e) => { handleNavigation(e, TEXTS[language].about); closeMenu(); }}>
                 {TEXTS[language].about}
               </Link>
             </li>
             <li>
-              <Link to="/portfolio" onClick={(e) => { handleNavigation(e, TEXTS[language].portfolio); closeMenu(); }}>
+              <Link to={`/${language}/portfolio`} onClick={(e) => { handleNavigation(e, TEXTS[language].portfolio); closeMenu(); }}>
                 {TEXTS[language].portfolio}
               </Link>
             </li>
             <li>
-              <Link to="/contact" onClick={(e) => { handleNavigation(e, TEXTS[language].contact); closeMenu(); }}>
+              <Link to={`/${language}/contact`} onClick={(e) => { handleNavigation(e, TEXTS[language].contact); closeMenu(); }}>
                 {TEXTS[language].contact}
               </Link>
             </li>
             <div className="mobileIcons">
-              <div className="toggle">
+              {/* <div className="toggle">
                 <ToggleSwitch checked={isChecked} onChange={handleChange} />
-              </div>
+              </div> */}
               <img
                 className="lang"
                 src={language === "ge" ? eng : geo}
