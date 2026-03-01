@@ -12,9 +12,20 @@ const About = () => {
 
   const closeOthers = useCallback((openedDetail) => {
     if (!sectionsRef.current) return;
+    const rect = openedDetail.getBoundingClientRect();
+    const offsetBefore = rect.top;
+
     const topDetails = sectionsRef.current.querySelectorAll(':scope > details');
     topDetails.forEach((d) => {
       if (d !== openedDetail) d.removeAttribute('open');
+    });
+
+    requestAnimationFrame(() => {
+      const offsetAfter = openedDetail.getBoundingClientRect().top;
+      const drift = offsetAfter - offsetBefore;
+      if (Math.abs(drift) > 1) {
+        window.scrollBy({ top: drift, behavior: 'instant' });
+      }
     });
   }, []);
 

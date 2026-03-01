@@ -60,39 +60,56 @@
   background-color: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  scrollbar-width: none;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 9999;
   cursor: pointer;
-  padding: 20px;
+  padding: 60px 20px 40px;
+}
+
+.modal.scroll {
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 80px 10px 40px;
 }
 
 .dark .modal { background-color: rgba(0, 0, 0, 0.95); }
 
 .modal-image {
-  margin: 10px;
   height: auto;
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: 85vh;
   object-fit: contain;
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
-.modal-image:hover { cursor: pointer; }
+.modal.scroll .modal-image {
+  max-width: 85vw;
+  max-height: 70vh;
+}
 
 @media screen and (min-width: 600px) {
   .certificates-box {
     grid-template-columns: 1fr 1fr;
   }
-  .modal-image { max-height: 85vh; }
+  .modal.scroll .modal-image {
+    max-width: 45vw;
+    max-height: 60vh;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   .certificates-box {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .modal.scroll .modal-image {
+    max-width: 30vw;
+    max-height: 55vh;
   }
 }
