@@ -46,8 +46,8 @@ const Portfolio = () => {
         "Travel insurance agent portal with full authentication & authorization system, Geomed integration for health insurance packages, agent dashboard for policy management, client tracking, and commission reporting.",
       technologies:
         "Next.js, Vercel, Auth/Registration, Role-Based Access, Geomed API, Agent Dashboard, Responsive Design",
-      githubLink: "https://insure.myprime.ge/travel/en/insurance#geomed",
-      projectLink: "https://insure.myprime.ge/travel/en/insurance#geomed",
+      githubLink: "https://insure.myprime.ge/travel/en#geomed",
+      projectLink: "https://insure.myprime.ge/travel/en#geomed",
     },
     {
       imageUrl: myHunter,
