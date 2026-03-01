@@ -1,13 +1,25 @@
 import MyImage from "../../assets/me.png";
 import "./Home.css";
-import cv from "../../assets/cv Ani Beroshvili 2024.pdf";
 import { TEXTS } from "../../Hooks/Languages";
 import { LanguageContext } from "../../Hooks/LanguageContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { generateCV } from "../../utils/generateCV";
 
 const Home = () => {
   const { language } = useContext(LanguageContext);
+  const [generating, setGenerating] = useState(false);
+
+  const handleDownload = async (e) => {
+    e.preventDefault();
+    setGenerating(true);
+    try {
+      await generateCV(language);
+    } catch (err) {
+      console.error("CV generation failed:", err);
+    }
+    setGenerating(false);
+  };
 
   return (
     <div className="home">
@@ -19,14 +31,17 @@ const Home = () => {
             Developer<span className="accent-dot">.</span>
           </h1>
           <p>{TEXTS[language].homeBio}</p>
-          <a
-            href={cv}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
             className="download"
+            onClick={handleDownload}
+            disabled={generating}
           >
-            {TEXTS[language].download}
-          </a>
+            {generating
+              ? language === "ge"
+                ? "იტვირთება..."
+                : "Generating..."
+              : TEXTS[language].download}
+          </button>
         </div>
         <div className="image-container">
           <img src={MyImage} alt="Ani Beroshvili" className="myImage" />
