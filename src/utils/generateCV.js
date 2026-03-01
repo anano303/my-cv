@@ -62,7 +62,7 @@ export async function generateCV(language = "en") {
   doc.text("Full-Stack Developer", margin, 24);
   doc.setFontSize(8.5);
   doc.text(
-    "beroshviliani100@gmail.com  |  +995 577 300 480  |  github.com/anano303",
+    "beroshviliani100@gmail.com  |  +995 577 300 480  |  github.com/anano303  |  ani-beroshvili.vercel.app",
     margin,
     32,
   );
@@ -320,8 +320,8 @@ export async function generateCV(language = "en") {
   doc.setTextColor(...gray);
   doc.text(
     isGe
-      ? "შექმნილია aniberoshvili.com – საიტიდან"
-      : "Generated from aniberoshvili.com",
+      ? "შექმნილია ani-beroshvili.vercel.app – საიტიდან"
+      : "Generated from ani-beroshvili.vercel.app",
     pageW / 2,
     289,
     { align: "center" },
