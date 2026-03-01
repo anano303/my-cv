@@ -41,6 +41,9 @@ function AppRoutes({ language, setLanguage, showAllPages, toggleShowAllPages, ha
     <LanguageContext.Provider value={{ language, setLanguage: changeLanguage }}>
       <Routes>
         <Route path="/" element={<Navigate to={`/${language}`} replace />} />
+        <Route path="/about" element={<Navigate to={`/${language}/about`} replace />} />
+        <Route path="/portfolio" element={<Navigate to={`/${language}/portfolio`} replace />} />
+        <Route path="/contact" element={<Navigate to={`/${language}/contact`} replace />} />
         <Route path="/:lang/*" element={
           <>
             <LanguageSync setLanguage={setLanguage} />
