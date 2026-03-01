@@ -215,11 +215,7 @@ const About = () => {
               : "Hello, I\u2019m Ani"}
             <span className="accent-dot">.</span>
           </h1>
-          <p>
-            {language === "ge"
-              ? "15 წლის მეტი გამოცდილება გაყიდვებსა და ბიზნეს მენეჯმენტში \u2014 კორპორატიული კლიენტებიდან სტარტაპების დაფუძნებამდე. ბავშვობიდან პროგრამირების სიყვარულმა 2022 წელს ცხოვრების მარშრუტი შეცვალა: პარალელურად დავეუფლე Full-Stack დეველოპმენტს და სწრაფად შევქმენი მრავალმხრივი პლატფორმები, როგორიცაა ექომერს მარკეტპლეისი, აუქციონების სისტემა და რეფერალური პროგრამები. დღეს ვაერთიანებ ბიზნესის და ტექნოლოგიების ცოდნას, რაც მეხმარება წარმატებული პროექტების განხორციელებაში და სხვადასხვა კომპანიებთან თანამშრომლობაში."
-              : "15+ years in sales & business management \u2014 from corporate clients to founding a startup. A lifelong passion for programming led me to make a bold career pivot in 2023: I mastered Full-Stack development and rapidly built complex platforms \u2014 e-commerce marketplaces, auction systems, referral programs. Today I bridge two worlds: business insight and technical execution."}
-          </p>
+          <p>{TEXTS[language].bio}</p>
         </div>
       </section>
 

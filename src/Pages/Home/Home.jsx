@@ -18,13 +18,7 @@ const Home = () => {
             <br />
             Developer<span className="accent-dot">.</span>
           </h1>
-          <p>
-            Welcome to my corner of the web! I'm Ani, a passionate{" "}
-            <span>full-stack developer</span> with a keen eye for detail and a
-            love for creating engaging digital experiences. From crafting
-            elegant user interfaces to building robust backends, I thrive on
-            bringing ideas to life through clean, efficient code.
-          </p>
+          <p>{TEXTS[language].homeBio}</p>
           <a
             href={cv}
             target="_blank"
@@ -40,7 +34,7 @@ const Home = () => {
       </div>
       <div className="sect2">
         <div className="text2">
-          <span>Let's Build Something Amazing.</span>
+          <span>{TEXTS[language].homeCta}</span>
           <button className="homeButton">
             <Link to={`/${language}/contact`}>{TEXTS[language].contactMe}</Link>
           </button>

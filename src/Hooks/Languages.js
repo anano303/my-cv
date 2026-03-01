@@ -63,6 +63,10 @@ export const TEXTS = {
       "CEO / დირექტორი — მარკეტინგი, გაყიდვები, ბიზნეს სტრატეგია, გუნდის მართვა და კომპანიის სრული ოპერაციული ხელმძღვანელობა",
     expTech: "კომპ. მეცნიერებები და პროგრამირება",
     expSales: "გაყიდვები და ბიზნესი",
+    bio: "მაქვს 15 წელზე მეტი გამოცდილება გაყიდვებსა და ბიზნეს მენეჯმენტში — კორპორატიული კლიენტებიდან სტარტაპების დაფუძნებამდე. ბავშვობიდან პროგრამირების სიყვარულმა 2022 წელს ცხოვრების მარშრუტი შეცვალა: პარალელურად დავეუფლე Full-Stack დეველოპმენტს და სწრაფად შევქმენი მრავალმხრივი პლატფორმები, როგორიცაა ექომერს მარკეტპლეისი, აუქციონების სისტემა და რეფერალური პროგრამები. დღეს ვაერთიანებ ბიზნესის და ტექნოლოგიების ცოდნას, რაც მეხმარება წარმატებული პროექტების განხორციელებაში და სხვადასხვა კომპანიებთან თანამშრომლობაში. ასევე, ბოლო 2 წელია თავად ვასწავლი სტუდენტებს ფრონტ-ენდ დეველოპმენტს   ერთ-ერთ აკადემიაში.",
+    homeCta: "ავაშენოთ რაღაც ახალი, განსხვავებული...",
+    homeBio:
+      "მოგესალმებით ჩემს ციფრულ სამყაროში! მე ანი ვარ — Full-Stack დეველოპერი, რომელიც შენს ნებისმიერ იდეას ციფრულ რეალობად გარდაქმნის. ჩემი მიზანია შევქმნა ინოვაციური და ფუნქციონალური პლატფორმები, რომლებიც არა მხოლოდ ლამაზად გამოიყურება, არამედ გეხმარება გაიმარტივო ყოველდღიური საქმიანობა.",
   },
 
   en: {
@@ -129,5 +133,9 @@ export const TEXTS = {
       "CEO / Director — Marketing, Sales, Business Strategy, Team Management & Full Company Operations",
     expTech: "Computer Science & Programming",
     expSales: "Sales & Business",
+    bio: "Over 15 years of experience in sales and business management — from corporate clients to founding startups. A childhood passion for programming changed my life's direction in 2022: I mastered Full-Stack development and rapidly built versatile platforms including an e-commerce marketplace, auction system, and referral programs. Today I combine business acumen with technical expertise, enabling me to deliver successful projects and collaborate with diverse companies. For the past 2 years, I've also been teaching front-end development to students at an academy.",
+    homeCta: "Let's Build Something Amazing.",
+    homeBio:
+      "Welcome to my corner of the web! I'm Ani, a passionate full-stack developer with a keen eye for detail and a love for creating engaging digital experiences. From crafting elegant user interfaces to building robust backends, I thrive on bringing ideas to life through clean, efficient code.",
   },
 };

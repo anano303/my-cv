@@ -1,17 +1,57 @@
 import "./Navbar.css";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageContext } from "../../../Hooks/LanguageContext.js";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { TEXTS } from "../../../Hooks/Languages.js";
 import geo from "../../../assets/Georgia.png";
 import eng from "../../../assets/USA.png";
 import { getSectionId, smoothScrollTo } from "../../../utils/scrollUtils";
 
+const SECTION_ROUTE_MAP = {
+  "home-section": "",
+  "about-section": "/about",
+  "portfolio-section": "/portfolio",
+  "contact-section": "/contact",
+};
+
 const Navbar = ({ onNavigate }) => {
   const { language, setLanguage } = useContext(LanguageContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
   const location = useLocation();
+
+  // Detect which section is visible when all pages are shown (arrow mode)
+  const detectActiveSection = useCallback(() => {
+    const sections = [
+      "home-section",
+      "about-section",
+      "portfolio-section",
+      "contact-section",
+    ];
+    const headerHeight = document.querySelector(".header")?.offsetHeight || 60;
+    const scrollY = window.scrollY + headerHeight + 100;
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const el = document.getElementById(sections[i]);
+      if (el && el.offsetTop <= scrollY) {
+        setActiveSection(SECTION_ROUTE_MAP[sections[i]]);
+        return;
+      }
+    }
+    setActiveSection("");
+  }, []);
+
+  useEffect(() => {
+    // Only run scroll detection when all pages are visible (onNavigate exists)
+    if (!onNavigate) {
+      setActiveSection(null);
+      return;
+    }
+    detectActiveSection();
+    window.addEventListener("scroll", detectActiveSection);
+    return () => window.removeEventListener("scroll", detectActiveSection);
+  }, [onNavigate, detectActiveSection]);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -19,6 +59,16 @@ const Navbar = ({ onNavigate }) => {
   const handleLangClick = () => {
     const newLanguage = language === "ge" ? "en" : "ge";
     setLanguage(newLanguage);
+  };
+
+  const isActive = (path) => {
+    // When in scroll mode (arrow clicked), use scroll-based detection
+    if (activeSection !== null) {
+      return activeSection === path;
+    }
+    // Otherwise use URL-based detection
+    const fullPath = path ? `/${language}${path}` : `/${language}`;
+    return location.pathname === fullPath;
   };
 
   const handleNavigation = (e, sectionName) => {
@@ -76,7 +126,7 @@ const Navbar = ({ onNavigate }) => {
       <div className="links desktop-links">
         <ul className="ul">
           <div className="desktop1">
-            <li className={location.pathname === `/${language}` ? "active" : ""}>
+            <li className={isActive("") ? "active" : ""}>
               <Link
                 to={`/${language}`}
                 onClick={(e) => handleNavigation(e, TEXTS[language].home)}
@@ -84,7 +134,7 @@ const Navbar = ({ onNavigate }) => {
                 {TEXTS[language].home}
               </Link>
             </li>
-            <li className={location.pathname === `/${language}/about` ? "active" : ""}>
+            <li className={isActive("/about") ? "active" : ""}>
               <Link
                 to={`/${language}/about`}
                 onClick={(e) => handleNavigation(e, TEXTS[language].about)}
@@ -94,7 +144,9 @@ const Navbar = ({ onNavigate }) => {
             </li>
           </div>
           <div className="desktop2">
-            <li className={`portfolio${location.pathname === `/${language}/portfolio` ? " active" : ""}`}>
+            <li
+              className={`portfolio${isActive("/portfolio") ? " active" : ""}`}
+            >
               <Link
                 to={`/${language}/portfolio`}
                 onClick={(e) => handleNavigation(e, TEXTS[language].portfolio)}
@@ -102,7 +154,7 @@ const Navbar = ({ onNavigate }) => {
                 {TEXTS[language].portfolio}
               </Link>
             </li>
-            <li className={location.pathname === `/${language}/contact` ? "active" : ""}>
+            <li className={isActive("/contact") ? "active" : ""}>
               <Link
                 to={`/${language}/contact`}
                 onClick={(e) => handleNavigation(e, TEXTS[language].contact)}
@@ -123,7 +175,7 @@ const Navbar = ({ onNavigate }) => {
             }}
           >
             <ul>
-              <li className={location.pathname === `/${language}` ? "active" : ""}>
+              <li className={isActive("") ? "active" : ""}>
                 <Link
                   to={`/${language}`}
                   onClick={(e) => {
@@ -134,7 +186,7 @@ const Navbar = ({ onNavigate }) => {
                   {TEXTS[language].home}
                 </Link>
               </li>
-              <li className={location.pathname === `/${language}/about` ? "active" : ""}>
+              <li className={isActive("/about") ? "active" : ""}>
                 <Link
                   to={`/${language}/about`}
                   onClick={(e) => {
@@ -145,7 +197,7 @@ const Navbar = ({ onNavigate }) => {
                   {TEXTS[language].about}
                 </Link>
               </li>
-              <li className={location.pathname === `/${language}/portfolio` ? "active" : ""}>
+              <li className={isActive("/portfolio") ? "active" : ""}>
                 <Link
                   to={`/${language}/portfolio`}
                   onClick={(e) => {
@@ -156,7 +208,7 @@ const Navbar = ({ onNavigate }) => {
                   {TEXTS[language].portfolio}
                 </Link>
               </li>
-              <li className={location.pathname === `/${language}/contact` ? "active" : ""}>
+              <li className={isActive("/contact") ? "active" : ""}>
                 <Link
                   to={`/${language}/contact`}
                   onClick={(e) => {
