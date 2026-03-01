@@ -239,7 +239,7 @@ export async function generateCV(language = "en") {
   projectEntry(
     "TravelPrime — Agent Portal",
     "insure.myprime.ge/travel",
-    "https://insure.myprime.ge/travel/ka#geomed",
+    "https://insure.myprime.ge/travel/en#geomed",
     isGe
       ? "სამოგზაურო დაზღვევის აგენტის პორტალი — ავტორიზაცია, Geomed ინტეგრაცია, აგენტის დეშბორდი (Next.js, Vercel, Role-Based Access)"
       : "Travel insurance agent portal — Auth, Geomed API integration, Agent dashboard (Next.js, Vercel, Role-Based Access)",
