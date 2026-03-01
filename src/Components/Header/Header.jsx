@@ -6,6 +6,7 @@ import geo from "../../assets/Georgia.png";
 import eng from "../../assets/USA.png";
 import logo from "../../assets/anano logo another.png";
 import { Link } from "react-router-dom";
+import { smoothScrollTo } from "../../utils/scrollUtils";
 
 const Header = ({ onNavigate }) => {
   const { language, setLanguage } = useContext(LanguageContext);
@@ -15,10 +16,17 @@ const Header = ({ onNavigate }) => {
     setLanguage(newLanguage);
   };
 
+  const handleLogoClick = (e) => {
+    if (onNavigate) {
+      e.preventDefault();
+      smoothScrollTo("home-section", 800, 60);
+    }
+  };
+
   return (
     <div className="header">
       <div className="mobileFlex">
-        <Link to={`/${language}`} className="logo">
+        <Link to={`/${language}`} className="logo" onClick={handleLogoClick}>
           <img alt="logo" src={logo} className="logo" />
         </Link>
         <Navbar onNavigate={onNavigate} />
