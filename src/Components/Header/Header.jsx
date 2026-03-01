@@ -1,23 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { LanguageContext } from "../../Hooks/LanguageContext";
 import "./Header.css";
 import Navbar from "./Navbar/Navbar";
 import geo from "../../assets/Georgia.png";
 import eng from "../../assets/USA.png";
-import { ThemeContext } from "../../Hooks/ThemeContext";
 import logo from "../../assets/anano logo another.png";
 import { Link } from "react-router-dom";
-import ToggleSwitch from "../Toggle/Toggle";
 
 const Header = ({ onNavigate }) => {
   const { language, setLanguage } = useContext(LanguageContext);
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  const [isChecked, setIsChecked] = useState(theme === "dark");
-
-  const handleChange = () => {
-    setIsChecked(!isChecked);
-    toggleTheme();
-  };
 
   const handleLangClick = () => {
     const newLanguage = language === "ge" ? "en" : "ge";

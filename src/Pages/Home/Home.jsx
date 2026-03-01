@@ -25,7 +25,12 @@ const Home = () => {
             elegant user interfaces to building robust backends, I thrive on
             bringing ideas to life through clean, efficient code.
           </p>
-          <a href={cv} target="_blank" rel="noopener noreferrer" className="download">
+          <a
+            href={cv}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download"
+          >
             {TEXTS[language].download}
           </a>
         </div>

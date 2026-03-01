@@ -6,30 +6,38 @@
   padding: 80px 8% 40px;
   position: relative;
   overflow: hidden;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 /* Subtle background effects */
 .home::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   right: -30%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(108, 99, 255, 0.08) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(108, 99, 255, 0.08) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   pointer-events: none;
 }
 .home::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -30%;
-  left: -20%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(0, 212, 170, 0.06) 0%, transparent 70%);
-  border-radius: 50%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  opacity: 0.03;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .sect1 {
@@ -46,7 +54,7 @@
 }
 
 .sect1 .text h1 {
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-family: "Syne", "Space Grotesk", "Inter", sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   color: var(--text-primary);
@@ -56,7 +64,7 @@
 }
 
 .sect1 .text h1::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 3px;
@@ -118,6 +126,7 @@
   border: 3px solid var(--border-color);
   box-shadow: var(--glow-primary);
   transition: box-shadow var(--transition-normal);
+ 
 }
 
 .myImage:hover {
@@ -145,7 +154,7 @@
 }
 
 .text2 span {
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-family: "Syne", "Space Grotesk", "Inter", sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 700;
   color: var(--text-primary);
@@ -188,17 +197,29 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  .myImage { width: 280px; height: 280px; }
+  .myImage {
+    width: 280px;
+    height: 280px;
+  }
   .sect2 {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
   }
-  .text2 { text-align: left; }
-  .sect2 > img { width: 300px; }
+  .text2 {
+    text-align: left;
+  }
+  .sect2 > img {
+    width: 300px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  .home { padding: 100px 12% 60px; }
-  .myImage { width: 340px; height: 340px; }
+  .home {
+    padding: 100px 12% 60px;
+  }
+  .myImage {
+    width: 340px;
+    height: 340px;
+  }
 }

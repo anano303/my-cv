@@ -8,9 +8,7 @@ export const LanguageProvider = ({ children }) => {
 
   useEffect(() => {
     const fontFamily =
-      language === "en"
-        ? "'supreme', sans-serif"
-        : "'BPGNinoMtavruliNormal', sans-serif";
+      language === "en" ? "'Inter', sans-serif" : "'FiraGO', sans-serif";
     document.body.style.fontFamily = fontFamily;
   }, [language]);
 

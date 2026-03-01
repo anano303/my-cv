@@ -6,21 +6,12 @@ import { createPortal } from "react-dom";
 import { TEXTS } from "../../../Hooks/Languages.js";
 import geo from "../../../assets/Georgia.png";
 import eng from "../../../assets/USA.png";
-import { ThemeContext } from "../../../Hooks/ThemeContext.js";
-import ToggleSwitch from "../../Toggle/Toggle.jsx";
 import { getSectionId, smoothScrollTo } from "../../../utils/scrollUtils";
 
 const Navbar = ({ onNavigate }) => {
   const { language, setLanguage } = useContext(LanguageContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  const [isChecked, setIsChecked] = useState(theme === "dark");
   const location = useLocation();
-
-  const handleChange = () => {
-    setIsChecked(!isChecked);
-    toggleTheme();
-  };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -33,21 +24,35 @@ const Navbar = ({ onNavigate }) => {
   const handleNavigation = (e, sectionName) => {
     const sectionId = getSectionId(sectionName);
     const targetElement = document.getElementById(sectionId);
-    if (!targetElement) { closeMenu(); return; }
+    if (!targetElement) {
+      closeMenu();
+      return;
+    }
     e.preventDefault();
     const isMobile = window.innerWidth <= 820;
+    const targetPath =
+      e.currentTarget.getAttribute("href")?.split("#")[0] || "/";
     closeMenu();
-    setTimeout(() => {
-      if (onNavigate) {
-        smoothScrollTo(sectionId, isMobile ? 1000 : 800, isMobile ? 40 : 60);
-      } else {
-        const currentPath = location.pathname;
-        const targetPath = e.currentTarget.getAttribute('href').split('#')[0] || '/';
-        if (currentPath === targetPath || (currentPath === '/' && targetPath === '/')) {
+    setTimeout(
+      () => {
+        if (onNavigate) {
           smoothScrollTo(sectionId, isMobile ? 1000 : 800, isMobile ? 40 : 60);
+        } else {
+          const currentPath = location.pathname;
+          if (
+            currentPath === targetPath ||
+            (currentPath === "/" && targetPath === "/")
+          ) {
+            smoothScrollTo(
+              sectionId,
+              isMobile ? 1000 : 800,
+              isMobile ? 40 : 60,
+            );
+          }
         }
-      }
-    }, isMobile ? 300 : 0);
+      },
+      isMobile ? 300 : 0,
+    );
   };
 
   useEffect(() => {
@@ -71,25 +76,37 @@ const Navbar = ({ onNavigate }) => {
       <div className="links desktop-links">
         <ul className="ul">
           <div className="desktop1">
-            <li>
-              <Link to={`/${language}`} onClick={(e) => handleNavigation(e, TEXTS[language].home)}>
+            <li className={location.pathname === `/${language}` ? "active" : ""}>
+              <Link
+                to={`/${language}`}
+                onClick={(e) => handleNavigation(e, TEXTS[language].home)}
+              >
                 {TEXTS[language].home}
               </Link>
             </li>
-            <li>
-              <Link to={`/${language}/about`} onClick={(e) => handleNavigation(e, TEXTS[language].about)}>
+            <li className={location.pathname === `/${language}/about` ? "active" : ""}>
+              <Link
+                to={`/${language}/about`}
+                onClick={(e) => handleNavigation(e, TEXTS[language].about)}
+              >
                 {TEXTS[language].about}
               </Link>
             </li>
           </div>
           <div className="desktop2">
-            <li className="portfolio">
-              <Link to={`/${language}/portfolio`} onClick={(e) => handleNavigation(e, TEXTS[language].portfolio)}>
+            <li className={`portfolio${location.pathname === `/${language}/portfolio` ? " active" : ""}`}>
+              <Link
+                to={`/${language}/portfolio`}
+                onClick={(e) => handleNavigation(e, TEXTS[language].portfolio)}
+              >
                 {TEXTS[language].portfolio}
               </Link>
             </li>
-            <li>
-              <Link to={`/${language}/contact`} onClick={(e) => handleNavigation(e, TEXTS[language].contact)}>
+            <li className={location.pathname === `/${language}/contact` ? "active" : ""}>
+              <Link
+                to={`/${language}/contact`}
+                onClick={(e) => handleNavigation(e, TEXTS[language].contact)}
+              >
                 {TEXTS[language].contact}
               </Link>
             </li>
@@ -97,44 +114,74 @@ const Navbar = ({ onNavigate }) => {
         </ul>
       </div>
       {/* Mobile overlay rendered via portal to escape header stacking context */}
-      {isMenuOpen && createPortal(
-        <div className="mobile-nav-overlay" onClick={(e) => { if (e.target === e.currentTarget) closeMenu(); }}>
-          <ul>
-            <li>
-              <Link to={`/${language}`} onClick={(e) => { handleNavigation(e, TEXTS[language].home); closeMenu(); }}>
-                {TEXTS[language].home}
-              </Link>
-            </li>
-            <li>
-              <Link to={`/${language}/about`} onClick={(e) => { handleNavigation(e, TEXTS[language].about); closeMenu(); }}>
-                {TEXTS[language].about}
-              </Link>
-            </li>
-            <li>
-              <Link to={`/${language}/portfolio`} onClick={(e) => { handleNavigation(e, TEXTS[language].portfolio); closeMenu(); }}>
-                {TEXTS[language].portfolio}
-              </Link>
-            </li>
-            <li>
-              <Link to={`/${language}/contact`} onClick={(e) => { handleNavigation(e, TEXTS[language].contact); closeMenu(); }}>
-                {TEXTS[language].contact}
-              </Link>
-            </li>
-            <div className="mobileIcons">
-              {/* <div className="toggle">
+      {isMenuOpen &&
+        createPortal(
+          <div
+            className="mobile-nav-overlay"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) closeMenu();
+            }}
+          >
+            <ul>
+              <li className={location.pathname === `/${language}` ? "active" : ""}>
+                <Link
+                  to={`/${language}`}
+                  onClick={(e) => {
+                    handleNavigation(e, TEXTS[language].home);
+                    closeMenu();
+                  }}
+                >
+                  {TEXTS[language].home}
+                </Link>
+              </li>
+              <li className={location.pathname === `/${language}/about` ? "active" : ""}>
+                <Link
+                  to={`/${language}/about`}
+                  onClick={(e) => {
+                    handleNavigation(e, TEXTS[language].about);
+                    closeMenu();
+                  }}
+                >
+                  {TEXTS[language].about}
+                </Link>
+              </li>
+              <li className={location.pathname === `/${language}/portfolio` ? "active" : ""}>
+                <Link
+                  to={`/${language}/portfolio`}
+                  onClick={(e) => {
+                    handleNavigation(e, TEXTS[language].portfolio);
+                    closeMenu();
+                  }}
+                >
+                  {TEXTS[language].portfolio}
+                </Link>
+              </li>
+              <li className={location.pathname === `/${language}/contact` ? "active" : ""}>
+                <Link
+                  to={`/${language}/contact`}
+                  onClick={(e) => {
+                    handleNavigation(e, TEXTS[language].contact);
+                    closeMenu();
+                  }}
+                >
+                  {TEXTS[language].contact}
+                </Link>
+              </li>
+              <div className="mobileIcons">
+                {/* <div className="toggle">
                 <ToggleSwitch checked={isChecked} onChange={handleChange} />
               </div> */}
-              <img
-                className="lang"
-                src={language === "ge" ? eng : geo}
-                alt="lang"
-                onClick={handleLangClick}
-              />
-            </div>
-          </ul>
-        </div>,
-        document.body
-      )}
+                <img
+                  className="lang"
+                  src={language === "ge" ? eng : geo}
+                  alt="lang"
+                  onClick={handleLangClick}
+                />
+              </div>
+            </ul>
+          </div>,
+          document.body,
+        )}
     </div>
   );
 };

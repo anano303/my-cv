@@ -78,7 +78,9 @@
   padding: 80px 10px 40px;
 }
 
-.dark .modal { background-color: rgba(0, 0, 0, 0.95); }
+.dark .modal {
+  background-color: rgba(0, 0, 0, 0.95);
+}
 
 .modal-image {
   height: auto;

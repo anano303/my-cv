@@ -23,6 +23,7 @@ import myHunter from "./my projects/myHunter.png";
 import prime1 from "./my projects/prime1.png";
 import prime2 from "./my projects/prime2.png";
 import shopIt from "./my projects/shopit.png";
+import ninoBarjadze from "./my projects/nino-barjadze.png";
 
 const Portfolio = () => {
   const { language } = useContext(LanguageContext);
@@ -58,15 +59,24 @@ const Portfolio = () => {
       githubLink: "https://github.com/anano303/myhunter",
       projectLink: "https://www.myhunter.ge/",
     },
-     {
+    {
       imageUrl: Silhoutte,
       projectTitle: "Silhoutte",
-      description:
-        "Landing page for handmade items with an elegant design ",
+      description: "Landing page for handmade items with an elegant design ",
       technologies:
         "Next.js,TypeScript,Responsive Design, Animations,Formspree, Firebase",
       githubLink: "https://github.com/anano303/silhoutte",
       projectLink: "https://silhoutte.vercel.app/",
+    },
+    {
+      imageUrl: ninoBarjadze,
+      projectTitle: "Nino Barjadze — Portfolio",
+      description:
+        "Personal portfolio website for a UX/UI & Graphic Designer, featuring services, skills, project showcase, and contact form with modern dark theme design.",
+      technologies:
+        "Next.js, TypeScript, Responsive Design, Animations, Vercel",
+      githubLink: "https://nino-barjadze.vercel.app",
+      projectLink: "https://nino-barjadze.vercel.app",
     },
     {
       imageUrl: SoulArt,
@@ -231,8 +241,6 @@ const Portfolio = () => {
       githubLink: "https://github.com/anano303/skilled-elearning-landing-page",
       projectLink: "https://anano303.github.io/skilled-elearning-landing-page/",
     },
-
-
   ];
 
   return (

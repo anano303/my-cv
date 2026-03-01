@@ -12,7 +12,7 @@
 
 .portfolioo h1 {
   text-align: center;
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-family: "Space Grotesk", "Inter", sans-serif;
   letter-spacing: 3px;
   line-height: 1.2;
   font-size: 2rem;
@@ -21,7 +21,7 @@
 }
 
 .portfolioo h1::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 3px;
@@ -46,7 +46,9 @@
   height: 300px;
   overflow: hidden;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
@@ -60,14 +62,19 @@
 .projectImage-placeholder {
   min-height: 100%;
   width: 100%;
-  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 50%, var(--accent-primary) 150%);
+  background: linear-gradient(
+    135deg,
+    var(--bg-tertiary) 0%,
+    var(--bg-secondary) 50%,
+    var(--accent-primary) 150%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .projectImage-placeholder span {
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-family: "Space Grotesk", "Inter", sans-serif;
   font-size: 4rem;
   font-weight: 800;
   color: var(--accent-primary);
@@ -109,8 +116,11 @@
   text-align: end;
   opacity: 0.9;
   font-size: 0.85rem;
-  font-family: 'Inter', sans-serif;
-  transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  font-family: "Inter", sans-serif;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .project::before {
@@ -232,7 +242,8 @@
   padding-bottom: 70px;
 }
 
-.project-description, .project-technologies {
+.project-description,
+.project-technologies {
   padding: 5px 15px;
   margin-bottom: 15px;
 }
@@ -257,21 +268,59 @@
   padding: 0 5px;
 }
 
-.project-details::-webkit-scrollbar { width: 4px; }
-.project-details::-webkit-scrollbar-track { background: rgba(10, 10, 15, 0.2); border-radius: 10px; }
-.project-details::-webkit-scrollbar-thumb { background: var(--accent-gradient); border-radius: 10px; }
+.project-details::-webkit-scrollbar {
+  width: 4px;
+}
+.project-details::-webkit-scrollbar-track {
+  background: rgba(10, 10, 15, 0.2);
+  border-radius: 10px;
+}
+.project-details::-webkit-scrollbar-thumb {
+  background: var(--accent-gradient);
+  border-radius: 10px;
+}
 
 @media screen and (min-width: 600px) {
-  .projectDiv img, .project { width: 280px; height: 350px; object-fit: cover; }
-  .project-details h3 { font-size: 1.1rem; margin: 10px 0; }
-  .project-details p { font-size: 0.9rem; line-height: 1.6; padding: 0 8px; }
-  .project:hover .project-details { padding-bottom: 80px; }
+  .projectDiv img,
+  .project {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+  }
+  .project-details h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  .project-details p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0 8px;
+  }
+  .project:hover .project-details {
+    padding-bottom: 80px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
-  .projectDiv img, .project { width: 450px; height: 550px; object-fit: cover; }
-  .project-details h3 { font-size: 1.2rem; margin: 12px 0; }
-  .project-details p { font-size: 1rem; line-height: 1.7; padding: 0 10px; }
-  .project:hover .project-details { padding-bottom: 100px; }
-  .project .buttons a { padding: 25px 30px; }
+  .projectDiv img,
+  .project {
+    width: 450px;
+    height: 550px;
+    object-fit: cover;
+  }
+  .project-details h3 {
+    font-size: 1.2rem;
+    margin: 12px 0;
+  }
+  .project-details p {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+  .project:hover .project-details {
+    padding-bottom: 100px;
+  }
+  .project .buttons a {
+    padding: 25px 30px;
+  }
 }

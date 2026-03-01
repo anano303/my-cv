@@ -15,16 +15,16 @@ const About = () => {
     const rect = openedDetail.getBoundingClientRect();
     const offsetBefore = rect.top;
 
-    const topDetails = sectionsRef.current.querySelectorAll(':scope > details');
+    const topDetails = sectionsRef.current.querySelectorAll(":scope > details");
     topDetails.forEach((d) => {
-      if (d !== openedDetail) d.removeAttribute('open');
+      if (d !== openedDetail) d.removeAttribute("open");
     });
 
     requestAnimationFrame(() => {
       const offsetAfter = openedDetail.getBoundingClientRect().top;
       const drift = offsetAfter - offsetBefore;
       if (Math.abs(drift) > 1) {
-        window.scrollBy({ top: drift, behavior: 'instant' });
+        window.scrollBy({ top: drift, behavior: "instant" });
       }
     });
   }, []);
@@ -41,17 +41,19 @@ const About = () => {
 
     const handleClickOutside = (e) => {
       if (!container.contains(e.target)) {
-        container.querySelectorAll(':scope > details[open]').forEach((d) => d.removeAttribute('open'));
+        container
+          .querySelectorAll(":scope > details[open]")
+          .forEach((d) => d.removeAttribute("open"));
       }
     };
 
-    const details = container.querySelectorAll(':scope > details');
-    details.forEach((d) => d.addEventListener('toggle', handleToggle));
-    document.addEventListener('click', handleClickOutside);
+    const details = container.querySelectorAll(":scope > details");
+    details.forEach((d) => d.addEventListener("toggle", handleToggle));
+    document.addEventListener("click", handleClickOutside);
 
     return () => {
-      details.forEach((d) => d.removeEventListener('toggle', handleToggle));
-      document.removeEventListener('click', handleClickOutside);
+      details.forEach((d) => d.removeEventListener("toggle", handleToggle));
+      document.removeEventListener("click", handleClickOutside);
     };
   }, [closeOthers]);
 

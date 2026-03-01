@@ -67,7 +67,7 @@ const Certificates = () => {
     } else {
       const selectedCerts = certificates[divId - 2]; // Subtract 2 because divId starts from 2
       setSelectedCertificates(
-        Array.isArray(selectedCerts) ? selectedCerts : [selectedCerts]
+        Array.isArray(selectedCerts) ? selectedCerts : [selectedCerts],
       );
       setShowScroll(false);
     }
