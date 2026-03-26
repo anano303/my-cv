@@ -161,7 +161,7 @@ const Portfolio = () => {
         "A website for a software development company, showcasing services and projects using React.",
       technologies: "React, SCSS, Responsive Design, Formspree, Firebase",
       githubLink: "https://github.com/anano303/BestSoft",
-      projectLink: "https://bestsoft.vercel.app/",
+      projectLink: "https://bestsoft.ge/",
     },
 
     {
