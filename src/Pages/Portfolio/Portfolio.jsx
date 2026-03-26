@@ -170,7 +170,7 @@ const Portfolio = () => {
       description: "Creative design studio website.",
       technologies: "React, CSS, Responsive Design",
       githubLink: "https://github.com/anano303/BluePrintProject2024",
-      projectLink: "https://blue-print-project2024.vercel.app/",
+      projectLink: "https://blue-print-georgia.vercel.app/",
     },
     {
       imageUrl: tbc,
