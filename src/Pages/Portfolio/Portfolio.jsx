@@ -151,7 +151,7 @@ const Portfolio = () => {
         "A platform for booking and purchasing train tickets online.",
       technologies: "Angular, Fetch, Axios, PDF Generator, API Integration",
       githubLink: "https://github.com/anano303/train-tickets",
-      projectLink: "https://train-tickets-nine.vercel.app/",
+      projectLink: "https://train-tkt.vercel.app/",
     },
 
     {
