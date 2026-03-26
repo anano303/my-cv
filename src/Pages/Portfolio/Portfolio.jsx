@@ -131,7 +131,7 @@ const Portfolio = () => {
       description: "Creative photo studio website.",
       technologies: "Next.js, CSS, Cloudinary, Formspree, Firebase",
       githubLink: "https://github.com/anano303/pixelstudio",
-      projectLink: "https://pixelstudio.ge",
+      projectLink: "https://pixelstudio-app.vercel.app",
     },
     {
       imageUrl: expense,
